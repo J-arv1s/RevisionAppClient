@@ -1,7 +1,7 @@
 # Revision App - Client Side
 
-This is the front end of our application. This is the side of our Revision that the user can see and interact with.
-NOTE: you need 
+This is the front end of our application. This is the side of our Revision App that the user can see and interact with.
+
 ## Installation & usage
 
 1. Set up server side:
