@@ -5,21 +5,25 @@ NOTE: you need
 ## Installation & usage
 
 1. Set up server side:
-  - Visit https://github.com/J-arv1s/RevisionAppServer
-  - Follow the instructions
+  - Follow the instructions on https://github.com/J-arv1s/RevisionAppServer
 
 2. On the terminal do the following:
 
  - Create a new folder
     - Type `mkdir [folder name]`
+
  - Open new folder
     - Type `cd [folder name]`
+
  - Clone repo onto your machine
     - Type `git@github.com:J-arv1s/RevisionAppClient.git`
+
  - Open repository
     - Type `cd RevisionAppClient`
+
  - Install required dependencies
     - Type `npm install`
+
  - To open local host
     - Type `npm run dev`
     - Follow given link (ctrl + link)
