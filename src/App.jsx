@@ -1,14 +1,16 @@
-import { useState } from 'react'
-
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { RegisterPage } from './pages'
 
+
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    
-    < RegisterPage/>
-     
+    <>
+    <Routes>
+      <Route path="/" element={< RegisterPage/>}/>
+    </Routes>
+  </>
   )
 }
 
