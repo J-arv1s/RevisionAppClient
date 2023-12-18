@@ -1,14 +1,9 @@
-import React, {useState} from 'react'
+import React  from 'react'
 import "./index.css"
 /** <script src="./assets/js/admin.js" defer></script>/ */
 
-
 const RegisterPage = () => {
   
-  function displayQuizes() {
-    document.getElementById("buttons-content").style.display = "block";
-  }
- 
   return (
 
     <>
@@ -18,7 +13,7 @@ const RegisterPage = () => {
           <h1>Subjects</h1>
           <div className='buttons'>
             <p id="mathsBtn" >Maths</p>
-            <div class="buttons-content">
+            <div className="buttons-content">
               <a href="#">Quiz 1</a>
               <a href="#">Quiz 2</a>
               <a href="#">Quiz 3</a>
@@ -26,7 +21,7 @@ const RegisterPage = () => {
           </div>
           <div className='buttons1'>
             <p id="sciencesBtn">Sciences</p>
-            <div class="buttons1-content">
+            <div className="buttons1-content">
               <a href="#">Quiz 1</a>
               <a href="#">Quiz 2</a>
               <a href="#">Quiz 3</a>
@@ -43,16 +38,15 @@ const RegisterPage = () => {
       <section id="middle">
         <div>
           <h2>Register an account</h2>
-        <form>
-          <label htmlFor="">Email: </label>
-          <input type="text"/>
-          <label htmlFor="">Username: </label>
-          <input type="text"/>
-          <label htmlFor="">Password: </label>
-          <input type="text"/>
-          <input type="submit"value="Sign up"/>
-        </form>
-        
+          <form>
+            <label htmlFor="">Email: </label>
+            <input type="text"/>
+            <label htmlFor="">Username: </label>
+            <input type="text"/>
+            <label htmlFor="">Password: </label>
+            <input type="text"/>
+            <input id="buttonSubmit"type="submit" value="Sign up"/>
+          </form>
         </div>
       </section>
     </section>
