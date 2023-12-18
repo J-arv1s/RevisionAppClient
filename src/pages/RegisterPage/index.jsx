@@ -1,19 +1,39 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./index.css"
+/** <script src="./assets/js/admin.js" defer></script>/ */
+
 
 const RegisterPage = () => {
+  
+  function displayQuizes() {
+    document.getElementById("buttons-content").style.display = "block";
+  }
+ 
   return (
+
     <>
     <section id="main">
-    <section id="firstSection">
-      <div className="subjects">  
-        <h1>Subjects</h1>
-        <div className='buttons'>
-          <p id="mathsBtn">Maths</p>
-          <p id="sciencesBtn">Sciences</p>
+      <section id="firstSection">
+        <div className="subjects">  
+          <h1>Subjects</h1>
+          <div className='buttons'>
+            <p id="mathsBtn" >Maths</p>
+            <div class="buttons-content">
+              <a href="#">Quiz 1</a>
+              <a href="#">Quiz 2</a>
+              <a href="#">Quiz 3</a>
+            </div>
+          </div>
+          <div className='buttons1'>
+            <p id="sciencesBtn">Sciences</p>
+            <div class="buttons1-content">
+              <a href="#">Quiz 1</a>
+              <a href="#">Quiz 2</a>
+              <a href="#">Quiz 3</a>
+            </div>
+          </div>
         </div>
-      </div>
-     </section>
+      </section>
       <section id="navSection">
         <div className='nav'>  
           <a href="">Login</a>
