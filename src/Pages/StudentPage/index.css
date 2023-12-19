@@ -1,0 +1,90 @@
+#firstSection {
+    display: flex;
+    flex-direction: row;
+}
+
+.subjects {
+    background-color: blueviolet;
+    padding: 4em;
+    height: 100vh; 
+    position: fixed; 
+    left: 0; 
+    top: 0; 
+    overflow-y: auto; 
+}
+
+#mathsBtn, #sciencesBtn {
+    border: solid 3px rgb(235, 84, 222);
+    padding: 1em 1.5em;
+    cursor: pointer;
+}
+
+#mathsBtn:hover, #sciencesBtn:hover {
+    background-color: rgb(235, 84, 222);
+}
+
+.buttons, .buttons1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.buttons-content, .buttons1-content {
+    display: none;
+    text-decoration: none;
+    background-color: #c768ec;
+    z-index: 1;
+    padding: 1em;
+}
+
+.buttons-content a, .buttons1-content a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+.buttons-content a:hover, .buttons1-content a:hover {
+    color: rgb(216, 25, 168);
+}
+
+.buttons:hover .buttons-content, .buttons1:hover .buttons1-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#progressSection {
+    padding: 2em;
+    width: 150%;
+    margin-left: 10px; 
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  #progressSection table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #progressSection th,
+  #progressSection td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #progressSection th {
+    background-color: #4A90E2;
+    color: white;
+  }
+  
+  #progressSection tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  #progressSection td {
+    height: 40px;
+  }
