@@ -1,16 +1,20 @@
 import React from 'react'
 import './App.css'
+import { Routes, Route } from 'react-router-dom';
 import { PageWrapper } from './components/index'
-import { LoginPage } from './Pages'
+import { LoginPage, StudentPage } from './Pages'
 
 function App() {
 
   return (
     <>
-      <header>
+      <header id='header'>
         <PageWrapper />
       </header>
-      <LoginPage />
+      <Routes>
+      <Route path='/login' element={<LoginPage />}/>
+      <Route path='/student' element={<StudentPage />}/>
+      </Routes>
     </>
   )
 }
