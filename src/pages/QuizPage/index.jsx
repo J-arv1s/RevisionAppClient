@@ -1,7 +1,8 @@
-import React from "react"
+import React  from 'react';
 import '../index.css'
 
-const RegisterPage = () => {
+const QuizPage = () => {
+  
   return (
     <>
     <section id="main">
@@ -26,24 +27,18 @@ const RegisterPage = () => {
           </div>
         </div>
       </section>
-      <section id="navSection">
-        <div className='nav'>  
-          <a href="">Login</a>
-          <a href="">Register</a>
-        </div>
-      </section>
-      <section id="middle">
-        <div>
-          <h2>Register an account</h2>
-          <form>
-            <label htmlFor="">Email: </label>
-            <input type="text"/>
-            <label htmlFor="">Username: </label>
-            <input type="text"/>
-            <label htmlFor="">Password: </label>
-            <input type="text"/>
-            <input id="buttonSubmit"type="submit" value="Sign up"/>
-          </form>
+      <section id="middle1">
+        <h2>quizname</h2>
+        <div className="quiz">
+          <p>Question 1</p>
+          <button>Answer1</button>
+          <button>Answer2</button>
+          <button>Answer3</button>
+          <button>Answer4</button>
+        <div className="move">
+            <button>Previous</button>
+            <button>Next</button>
+        </div> 
         </div>
       </section>
     </section>
@@ -51,4 +46,4 @@ const RegisterPage = () => {
   )
 }
 
-export default RegisterPage
+export default QuizPage
