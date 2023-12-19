@@ -1,5 +1,6 @@
 import React  from 'react';
 import '../index.css'
+import { Link } from 'react-router-dom';
 
 const QuizPage = () => {
   
@@ -12,7 +13,7 @@ const QuizPage = () => {
           <div className='buttons'>
             <p id="mathsBtn" >Maths</p>
             <div className="buttons-content">
-              <a href="#">Quiz 1</a>
+            <Link to="/quiz">Quiz 1</Link>
               <a href="#">Quiz 2</a>
               <a href="#">Quiz 3</a>
             </div>
@@ -20,7 +21,7 @@ const QuizPage = () => {
           <div className='buttons1'>
             <p id="sciencesBtn">Sciences</p>
             <div className="buttons1-content">
-              <a href="#">Quiz 1</a>
+              <Link to="/quiz">Quiz 1</Link>
               <a href="#">Quiz 2</a>
               <a href="#">Quiz 3</a>
             </div>
