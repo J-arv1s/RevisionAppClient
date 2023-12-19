@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
-
+import "./index.css"
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false); // New state to track if the form is submitted
-
+  const [isSubmitted, setIsSubmitted] = useState(false); 
 
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log('Login with:', email, password);
-    setIsSubmitted(true)
+    setIsSubmitted(true);
   };
+  
 
   const pageStyle = {
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'row', 
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly', 
     height: '100vh',
-    backgroundColor: '#f0f0f0',
+    width: '100%',
+    backgroundColor: 'rgb(238, 153, 234)',
   };
 
   const formStyle = {
@@ -26,13 +27,14 @@ const LoginPage = () => {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '100%', // Full width of the parent container
-    maxWidth: '400px', // Maximum width of the form
+    width: '100%', 
+    maxWidth: '500px', 
     padding: '20px',
     boxSizing: 'border-box',
     borderRadius: '10px',
     backgroundColor: '#ffffff',
     boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+    margin: '0 20px', 
   };
 
   const inputStyle = {
@@ -56,10 +58,24 @@ const LoginPage = () => {
     cursor: 'pointer',
   };
 
+  
+  const additionalContentStyle = {
+    width: '40%', 
+    padding: '20px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+  };
+
   return (
     <div style={pageStyle}>
-      <h1 style={{ marginBottom: '20px' }}>Login</h1>
+      <div style={additionalContentStyle}>
+        <h2>Login to Get Started!</h2>
+        <p>Enter your Email and Password</p>
+      </div>
       <form onSubmit={handleSubmit} style={formStyle}>
+        <h1 style={{ marginBottom: '20px' }}>Login</h1>
         <input
           type="email"
           placeholder="Email"
@@ -83,4 +99,4 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
-``
+
