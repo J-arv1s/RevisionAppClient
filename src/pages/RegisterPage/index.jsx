@@ -1,11 +1,8 @@
-import React  from 'react'
-import "./index.css"
-/** <script src="./assets/js/admin.js" defer></script>/ */
+import React from "react"
+import '../index.css'
 
 const RegisterPage = () => {
-  
   return (
-
     <>
     <section id="main">
       <section id="firstSection">
