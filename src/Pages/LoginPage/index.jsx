@@ -97,12 +97,14 @@ const LoginPage = () => {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   };
+
+
 
   return (
     <div style={pageStyle}>
-      <div style={additionalContentStyle}>
+      <div className="login" style={additionalContentStyle}>
         <h2>Login to Get Started!</h2>
         <p>Enter your Username and Password</p>
         {loginMessage && <div>{loginMessage}</div>}

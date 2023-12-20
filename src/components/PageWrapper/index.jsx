@@ -5,7 +5,7 @@ const linkStyle = ({ isActive }) => ({
   color: isActive ? '#2B061E' : '#4A4A4A', // Active link in a darker color
   textDecoration: 'none',
   padding: '10px 15px',
-  fontSize: '16px',
+  fontSize: '22px',
   fontWeight: isActive ? 'bold' : 'normal', // Bold for active link
 });
 
