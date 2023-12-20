@@ -1,17 +1,48 @@
 import React, { useState } from 'react';
-import "./index.css"
+import { useNavigate } from 'react-router-dom';
+import "./index.css";
 
 const LoginPage = () => {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false); 
+  const [loginMessage, setLoginMessage] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log('Login with:', email, password);
-    setIsSubmitted(true);
+    
+    try {
+      const response = await fetch('http://localhost:3000/users/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setLoginMessage('Login successful. Redirecting...');
+        setTimeout(() => {
+          navigate('/quiz');
+        }, 3000); 
+      } else {
+        console.error('Login failed:', data.error);
+        setLoginMessage('Login failed. Please try again.');
+
+        setTimeout(() => {
+          setLoginMessage('');
+        }, 3000);
+      }
+    } catch (error) {
+      console.error('Network error:', error);
+      setLoginMessage('Network error. Please try again.');
+      setTimeout(() => {
+        setLoginMessage('');
+      }, 3000);
+    }
   };
-  
 
   const pageStyle = {
     display: 'flex',
@@ -22,7 +53,7 @@ const LoginPage = () => {
     width: '100%',
     backgroundColor: 'rgb(238, 153, 234)',
   };
-
+  
   const formStyle = {
     display: 'flex',
     flexDirection: 'column',
@@ -37,7 +68,7 @@ const LoginPage = () => {
     boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
     margin: '0 20px', 
   };
-
+  
   const inputStyle = {
     width: '100%',
     padding: '10px',
@@ -46,7 +77,7 @@ const LoginPage = () => {
     border: '1px solid #ddd',
     fontSize: '16px',
   };
-
+  
   const buttonStyle = {
     width: '100%',
     padding: '10px',
@@ -58,7 +89,7 @@ const LoginPage = () => {
     fontSize: '16px',
     cursor: 'pointer',
   };
-
+  
   
   const additionalContentStyle = {
     width: '40%', 
@@ -75,15 +106,16 @@ const LoginPage = () => {
     <div style={pageStyle}>
       <div className="login" style={additionalContentStyle}>
         <h2>Login to Get Started!</h2>
-        <p>Enter your Email and Password</p>
+        <p>Enter your Username and Password</p>
+        {loginMessage && <div>{loginMessage}</div>}
       </div>
       <form onSubmit={handleSubmit} style={formStyle}>
         <h1 style={{ marginBottom: '20px' }}>Login</h1>
         <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
           style={inputStyle}
           required
         />
@@ -102,4 +134,5 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+
 
