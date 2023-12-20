@@ -23,6 +23,7 @@ const LoginPage = () => {
       const data = await response.json();
 
       if (response.ok) {
+        localStorage.setItem("token", data.token)
         setLoginMessage('Login successful. Redirecting...');
         setTimeout(() => {
           navigate('/quiz');
