@@ -1,5 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&family=Manrope&family=Nunito+Sans:opsz,wght@6..12,300&display=swap');
 
+body {
+    background-color: rgb(238, 153, 234);
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.move {
+    display: flex;
+    flex-direction: row;
+    gap:5em;
+}
+
+.quiz { 
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    padding:30px 70px 30px 70px;
+    /*background-color: rgb(118, 47, 185);*/
+    background-color: rgb(240, 122, 76);
+    border-radius: 15px;
+}
+
+.quiz p {
+    font-size:30px;
+}
+
+.quiz button {
+    padding:20px;
+    font-size: 20px;
+}
 
 #firstSection {
     display: flex;
@@ -41,11 +71,79 @@ h2 {
     margin-left: 20em;
 }
 
+#middleRegister {
+    display: flex;
+    justify-content: center;
+}
 
+.registerForm {
+    background-color: rgb(255, 255, 255);
+    margin-top: 12em;
+   /* box-shadow: 0 2px 4px white;*/
+    border-radius: 10px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:1em; 
+    padding: 50px;
+}
 
+.registerForm form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+}
 
+.registerForm form input[type="text"],input[type="password"] {
+    padding: 13px;
+    font-size: 18px;
+}
 
+.registerForm form label {
+    font-size: 22px;
+}
 
+#buttonSubmit:hover {
+    background-color: rgb(110, 158, 248);
+}
+
+#buttonSubmit {
+    padding: 13px;
+    font-size: 18px;
+    border-radius: 6px;
+    border-style: none;
+    cursor: pointer;
+    background-color: #4A90E2;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+#middle1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0em 3em 3em 3em;
+    margin-left: 20em;
+}
+
+#middle1 h2 {
+    margin-top: 2em;
+}
+.quiz button {
+   background-color: rgb(235, 79, 17);
+   border-radius: 7px;
+   cursor: pointer;
+   border-style: none;
+}
+
+.quiz button:hover {
+    background-color: rgb(230, 90, 35);
+}
+
+#navSection {
+    border-bottom: solid 2px blueviolet;
+}
 .subjects {
     display: flex;
     flex-direction: column;
@@ -135,6 +233,13 @@ h2 {
     background-color:  rgb(228, 114, 218);
  
 }
+
+#navSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 main { 
     display: flex;
     justify-content: center;
