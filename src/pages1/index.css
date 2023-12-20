@@ -9,8 +9,7 @@ body {
 .move {
     display: flex;
     flex-direction: row;
-    
- gap:5em;
+    gap:5em;
 }
 
 .quiz { 
@@ -39,6 +38,7 @@ body {
     height: 100%;
    /* width: 160px; /* Set the width of the sidebar */
     position: fixed; 
+    gap:1em;
 }
 
 .subjects h1 {
@@ -51,7 +51,7 @@ h2 {
     margin-top: 3em;
     font-size: 43px;
 }
-
+/*
 .nav {
     display: flex;
     justify-content: center;
@@ -71,6 +71,7 @@ h2 {
 .nav a:hover {
     color:rgb(115, 18, 128);
 }
+*/
 
 #middle {
     display: flex;
@@ -89,11 +90,20 @@ h2 {
     margin-left: 20em;
 }
 
+.quiz button {
+   background-color: #c768ec;
+   border-radius: 7px;
+   cursor: pointer;
+}
+
+.quiz button:hover {
+    background-color: blueviolet;
+}
+
 #middle form {
     display:flex;
     flex-direction: column;
     gap:1em;
-    
 }
 
 #middle form input[type="text"] {
@@ -123,19 +133,9 @@ h2 {
 .subjects {
     display: flex;
     flex-direction: column;
-
 }
 
-.buttons {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-size: 30px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    display: inline-block;
-}
-.buttons1 {
-    display: flex;
+.buttons, .buttons1 {
     align-items: center;
     flex-direction: column;
     font-size: 30px;
@@ -184,7 +184,6 @@ h2 {
     margin-top: 0;
 }
 
-
 .buttons1-content {
     display: none;
     text-decoration: none;
@@ -205,12 +204,16 @@ h2 {
     border: solid 3px rgb(235, 84, 222);
     padding: 1em 1.5em 1em 1.5em;
     cursor: pointer;
+    margin-bottom: 0;
 }
 
 #sciencesBtn {
     border: solid 3px rgb(235, 84, 222);
+  
     padding: 1em;
     cursor: pointer;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 #mathsBtn:hover ,#sciencesBtn:hover {
