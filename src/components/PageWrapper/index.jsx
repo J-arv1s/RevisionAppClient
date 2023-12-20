@@ -23,6 +23,7 @@ const PageWrapper = () => {
         <NavLink to="/profile" style={linkStyle}>Profile</NavLink>
         <NavLink to="/leaderboard" style={linkStyle}>Leaderboard</NavLink>
         <NavLink to="/quiz" style={linkStyle}>Quiz</NavLink>
+        <NavLink to="/teacherHome" style={linkStyle}>Teacher</NavLink>
         <NavLink to="/" style={linkStyle}>Logout</NavLink>
       </nav>
     </header>
