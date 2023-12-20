@@ -12,10 +12,7 @@ const linkStyle = ({ isActive }) => ({
 const navBarStyle = {
   display: 'flex',
   justifyContent: 'space-evenly', // Spreads out the links more evenly
-  alignItems: 'center',
-  backgroundColor: '#f8f8f8', // A light background for the nav bar
-  padding: '10px 0',
-  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // A subtle shadow for depth
+  alignItems: 'center', // A light background for the nav bar, // A subtle shadow for depth
 };
 
 const PageWrapper = () => {

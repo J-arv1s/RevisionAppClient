@@ -17,12 +17,13 @@ body {
     gap: 1.5em;
     flex-direction: column;
     padding:30px 70px 30px 70px;
-    background-color: rgb(62, 10, 110);
+    background-color: rgb(118, 47, 185);
     border-radius: 6px;
 }
 
 .quiz button {
     padding:20px;
+    font-size: 20px;
 }
 
 #firstSection {
@@ -47,32 +48,14 @@ body {
     margin-top: 3em;
 }
 
+.quiz p {
+    font-size:30px;
+}
+
 h2 {
     margin-top: 3em;
     font-size: 43px;
 }
-/*
-.nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding:3em;
-    margin-left: 15em ;
-    gap:3em;
-    flex-direction: row;
-}
-.nav a {
-    color:rgb(26, 3, 29);
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.nav a:hover {
-    color:rgb(115, 18, 128);
-}
-*/
-
 #middle {
     display: flex;
     justify-content: center;
