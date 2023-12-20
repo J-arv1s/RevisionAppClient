@@ -39,7 +39,7 @@ const QuizPage = () => {
         <div className="move">
             <button>Previous</button>
             <button>Next</button>
-        </div> 
+        </div>
         </div>
       </section>
     </section>
