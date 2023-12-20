@@ -38,8 +38,8 @@ const RegisterPage = () => {
   return (
     <>
       <section id="main">
-        <section id="middle">
-          <div>
+        <section id="middleRegister">
+          <div className="registerForm">
             <h2>Register an account</h2>
             {successMessage && <p>{successMessage}</p>}
             <form onSubmit={handleRegister}>

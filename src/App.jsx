@@ -2,11 +2,7 @@ import React from 'react'
 import './App.css'
 import { Routes, Route } from 'react-router-dom';
 import { PageWrapper } from './components/index'
-import { LoginPage, StudentPage, SubjectsPage } from './Pages'
-import { RegisterPage } from './pages1'
-import QuizPage from './pages1/QuizPage';
-import ProfilePage from './Pages/ProfilePage';
-
+import { LoginPage, StudentPage, SubjectsPage, RegisterPage, QuizPage, ProfilePage } from './AllPages'
 
 function App() {
 
