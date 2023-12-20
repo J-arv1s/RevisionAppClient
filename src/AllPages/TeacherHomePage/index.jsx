@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const TeacherHomePage = () => {
   return (
     <>
-        <section id="teacherHome">
+        <section id="teacher">
             <div className='buttons'>
                 <Link id='link1' to="/subjects">Subjects</Link>
                 <Link id='link2'to="/quizes">Quizes</Link>
