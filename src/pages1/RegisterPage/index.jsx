@@ -2,24 +2,24 @@ import React from "react"
 import '../index.css'
 
 const RegisterPage = () => {
+
   return (
     <>
-    <section id="main">
-      <section id="middle">
-        <div>
+      <section id="middleRegister">
+        <div className="registerForm">
           <h2>Register an account</h2>
-          <form>
-            <label htmlFor="">Email: </label>
-            <input type="text"/>
+          
+            <div>
             <label htmlFor="">Username: </label>
             <input type="text"/>
-            <label htmlFor="">Password: </label>
+           </div> 
+           <div>
+           <label htmlFor="">Password: </label>
             <input type="text"/>
-            <input id="buttonSubmit"type="submit" value="Sign up"/>
-          </form>
-        </div>
+           </div>
+           <input id="buttonSubmit"type="submit" value="Sign up"/>
+          </div>
       </section>
-    </section>
     </>
   )
 }
