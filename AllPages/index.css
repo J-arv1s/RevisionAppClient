@@ -239,3 +239,34 @@ h2 {
     align-items: center;
     justify-content: center;
 }
+
+main { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main p {
+  font-size: 30px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #000; /* Border around the table */
+  }
+  
+  th, td {
+    border: 1px solid #000; /* Border for cells */
+    padding: 20px;
+    background-color: #f2f2f2;
+  }
+
+  
+  th {
+    padding: 20px;
+    background-color: #f2f2f2; /* Background color for header cells */
+  }
+  main table {
+    font-size:25px ;
+  }

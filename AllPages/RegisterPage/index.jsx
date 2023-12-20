@@ -38,7 +38,7 @@ const RegisterPage = () => {
   return (
     <>
       <section id="main">
-        <section id="middle">
+        <section id="middleRegister">
           <div>
             <h2>Register an account</h2>
             {successMessage && <p>{successMessage}</p>}
