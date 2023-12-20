@@ -5,6 +5,7 @@ import { PageWrapper } from './components/index'
 import { LoginPage, StudentPage, SubjectsPage } from './Pages'
 import { RegisterPage } from './pages1'
 import QuizPage from './pages1/QuizPage';
+import ProfilePage from './Pages/ProfilePage';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Route path='/student' element={<StudentPage />}/>
       <Route path='/subjects' element={<SubjectsPage />}/>
       <Route path='/quiz' element={<QuizPage />}/>
+      <Route path='/profile' element={<ProfilePage />}/>
       </Routes>
     </>
   )

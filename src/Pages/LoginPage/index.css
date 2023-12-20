@@ -4,3 +4,7 @@ body {
     margin: 0;
     font-family: 'Nunito Sans', sans-serif;
 }
+
+.login {
+    margin-bottom: 11em;
+}

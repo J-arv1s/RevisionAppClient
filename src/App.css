@@ -46,9 +46,9 @@
   top: 0;
   left: 0; 
   width: 100%; 
- background-color: white; 
+  background-color: white; 
  /* color: white;*/
-  box-shadow: 0 2px 4px white; 
+  box-shadow: 0 2px 4px rgb(130, 100, 134); 
   z-index: 1000;
   padding:15px 10px 10px 10px;
 }
