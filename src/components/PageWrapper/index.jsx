@@ -27,13 +27,17 @@ const PageWrapper = () => {
 
   return (
     <header style={{ marginBottom: "20px" }}>
-      <nav style={navBarStyle}>
-        <NavLink to="/register" style={linkStyle}>
-          Register
-        </NavLink>
-        <NavLink to="/profile" style={linkStyle}>
-          Profile
-        </NavLink>
+     <nav style={navBarStyle}>
+        {!isLoggedIn && (
+          <NavLink to="/register" style={linkStyle}>
+            Register
+          </NavLink>
+        )}
+         {isLoggedIn && (
+          <NavLink to="/profile" style={linkStyle}>
+            Profile
+          </NavLink>
+        )}
         <NavLink to="/leaderboard" style={linkStyle}>
           Leaderboard
         </NavLink>
@@ -45,7 +49,7 @@ const PageWrapper = () => {
             Logout
           </NavLink>
         ) : (
-          <NavLink to="/login" style={linkStyle}>
+          <NavLink to="/" style={linkStyle}>
             Login
           </NavLink>
         )}
