@@ -41,12 +41,14 @@ body {
     position: fixed; 
 }
 
-h1 {
+.subjects h1 {
     font-size: 45px;
     font-style: italic;
+    margin-top: 3em;
 }
 
 h2 {
+    margin-top: 3em;
     font-size: 43px;
 }
 

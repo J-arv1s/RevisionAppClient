@@ -2,8 +2,9 @@ import React from 'react'
 import './App.css'
 import { Routes, Route } from 'react-router-dom';
 import { PageWrapper } from './components/index'
-import { LoginPage, StudentPage, SubjectsPage, RegisterPage, QuizPage } from './Pages'
-
+import { LoginPage, StudentPage, SubjectsPage } from './Pages'
+import { RegisterPage } from './pages1'
+import QuizPage from './pages1/QuizPage';
 
 
 function App() {
@@ -18,7 +19,6 @@ function App() {
       <Route path='/login' element={<LoginPage />}/>
       <Route path='/student' element={<StudentPage />}/>
       <Route path='/subjects' element={<SubjectsPage />}/>
-      <Route path='/quiz' element={<QuizPage />}/>
       </Routes>
     </>
   )
