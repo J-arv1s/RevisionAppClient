@@ -11,8 +11,8 @@ const QuizPage = () => {
   const [showAnswer, setShowAnswer] = useState(false);
   const [showScore, setShowScore] = useState(false);
 
-  const shuffleAnswers = (correctAnswer, otherOptions) => {
-    const allAnswers = [correctAnswer, ...otherOptions];
+  const shuffleAnswers = (correctAnswer, wrongAnswers) => {
+    const allAnswers = [correctAnswer, ...wrongAnswers];
     return allAnswers.sort(() => Math.random() - 0.5);
   };
 
@@ -21,7 +21,7 @@ const QuizPage = () => {
       const response = await fetch('http://localhost:3000/quizzes/science-quiz');
       const data = await response.json();
       setQuestions(data.questions);
-      setAnswers(shuffleAnswers(data.questions[0].answer, ['wrong1', 'wrong2', 'wrong3']));
+      setAnswers(shuffleAnswers(data.questions[0].answer, data.questions[0].wrongAnswers));
     } catch (error) {
       console.error('Error fetching quiz data:', error);
     }
@@ -29,26 +29,27 @@ const QuizPage = () => {
 
   const handleAnswerClick = (answer) => {
     setSelectedAnswer(answer);
-    setShowAnswer(false); // Keep the selected answer highlighted
+    setShowAnswer(false); 
   };
 
   const handleNextClick = () => {
     const isCorrectAnswer = selectedAnswer === questions[currentQuestionIndex].answer;
     if (isCorrectAnswer) {
-      setScore(score + 1); // Increment score if the answer is correct
+      setScore(score + 1); 
     }
-    setShowAnswer(true); // Show whether the answer is correct
+    setShowAnswer(true); 
 
     setTimeout(() => {
       if (currentQuestionIndex < questions.length - 1) {
         setCurrentQuestionIndex(currentQuestionIndex + 1);
-        setAnswers(shuffleAnswers(questions[currentQuestionIndex + 1].answer, ['wrong1', 'wrong2', 'wrong3']));
+        const nextQuestion = questions[currentQuestionIndex + 1];
+        setAnswers(shuffleAnswers(nextQuestion.answer, nextQuestion.wrongAnswers));
         setSelectedAnswer('');
         setShowAnswer(false);
       } else {
-        setShowScore(true); // Show the final score
+        setShowScore(true); 
       }
-    }, 1000); // Delay before moving on to the next question or showing the score
+    }, 1000); 
   };
 
   useEffect(() => {
@@ -93,13 +94,13 @@ const QuizPage = () => {
                     key={index}
                     onClick={() => handleAnswerClick(answer)}
                     style={{
-                      backgroundColor: selectedAnswer === answer && !showAnswer ? '#ddd' : // Darken selected answer
+                      backgroundColor: selectedAnswer === answer && !showAnswer ? '#ddd' :
                         showAnswer
                           ? answer === currentQuestion.answer
-                            ? 'lightgreen' // Correct answer
+                            ? 'lightgreen'
                             : selectedAnswer === answer
-                              ? 'red' // Wrong answer clicked
-                              : '' // Not clicked
+                              ? 'red'
+                              : ''
                           : '',
                       color: showAnswer || selectedAnswer === answer ? 'white' : 'black',
                     }}
@@ -128,6 +129,7 @@ const QuizPage = () => {
 };
 
 export default QuizPage;
+
 
 
 
