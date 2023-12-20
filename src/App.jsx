@@ -15,11 +15,10 @@ function App() {
         <PageWrapper />
       </header>
       <Routes>
-        <Route path="/" element={< LoginPage/>}/>   
-        <Route path='/register' element={<RegisterPage />}/>
-        <Route path='/student' element={<StudentPage />}/>
-        <Route path='/subjects' element={<SubjectsPage />}/>
-        <Route path='/quiz' element={<QuizPage />}/>
+      <Route path="/" element={< RegisterPage/>}/>   
+      <Route path='/login' element={<LoginPage />}/>
+      <Route path='/student' element={<StudentPage />}/>
+      <Route path='/subjects' element={<SubjectsPage />}/>
       </Routes>
     </>
   )

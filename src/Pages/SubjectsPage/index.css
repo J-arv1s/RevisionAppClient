@@ -1,0 +1,25 @@
+#heading{
+    margin-top: 50px;
+}
+
+#add {
+    display: block; 
+    width: max-content; 
+    margin: 10px auto; 
+    padding: 15px 30px; 
+    background-color: #4CAF50;
+    color: white; 
+    font-size: 1.2rem; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+#add:hover {
+    background-color: #45a049; 
+}
+
+#add:active {
+    transform: scale(0.95); 
+}

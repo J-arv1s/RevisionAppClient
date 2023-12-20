@@ -1,11 +1,12 @@
 import React from 'react';
+import "./index.css"
 
 const TeacherSubject = ({ subjectName }) => {
   return (
-    <div>
-      <button>{subjectName}</button>
-      <button>Edit</button>
-      <button>Delete</button>
+    <div id='teach-info'>
+      <h3 id='sub-name'>{subjectName}</h3>
+      <button id='edit'>Edit</button>
+      <button id='delete'>Delete</button>
     </div>
   );
 };
