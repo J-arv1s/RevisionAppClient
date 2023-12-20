@@ -6,11 +6,43 @@ body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
+#teacherHome {
+    margin-top: 15em;
+    gap:3em;
+    display: flex;
+    flex-direction: column;
+}
+
+#teacherHome .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3em;
+}
+
+#teacherHome #link1, #link2, #link3 {
+    cursor: pointer;
+    font-size: 24px;
+    padding: 30px 60px 30px 60px;
+    border-radius: 6px ;
+    border-style: none;
+    background-color: #4A90E2;
+    text-decoration: none;
+    color: rgb(56, 53, 53);
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+#teacherHome #link1:hover,#teacherHome #link2:hover,#teacherHome #link3:hover {
+   background-color: #a7c5e7;
+}
+  
+
 .move {
     display: flex;
     flex-direction: row;
     gap:5em;
 }
+
 
 .quiz { 
     display: flex;
@@ -79,7 +111,7 @@ h2 {
 .registerForm {
     background-color: rgb(255, 255, 255);
     margin-top: 12em;
-   /* box-shadow: 0 2px 4px white;*/
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     border-radius: 10px;
     display:flex;
     justify-content: center;
