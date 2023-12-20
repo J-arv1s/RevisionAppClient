@@ -14,7 +14,7 @@ body {
 
 .quiz { 
     display: flex;
-    gap: 1.5em;
+    gap: 1em;
     flex-direction: column;
     padding:30px 70px 30px 70px;
     background-color: rgb(118, 47, 185);
@@ -33,7 +33,7 @@ body {
 
 .subjects {
     /*padding-bottom: 25.6em;*/
-    background-color: blueviolet;
+    background-color: rgb(143, 54, 226);
     padding-left: 4em;
     padding-right: 4em;
     height: 100%;
@@ -73,8 +73,11 @@ h2 {
     margin-left: 20em;
 }
 
+#middle1 h2 {
+    margin-top: 2em;
+}
 .quiz button {
-   background-color: #c768ec;
+   background-color: #d3a3e6;
    border-radius: 7px;
    cursor: pointer;
 }
@@ -129,7 +132,7 @@ h2 {
 .buttons-content {
     display: none;
     text-decoration: none;
-    background-color: #c768ec;
+    background-color: rgb(231, 135, 223);
     z-index: 1;
     padding: 1em;
    
@@ -170,7 +173,8 @@ h2 {
 .buttons1-content {
     display: none;
     text-decoration: none;
-    background-color: #c768ec;
+    background-color: 
+    rgb(231, 135, 223);
     z-index: 1;
     padding: 1em;
    
@@ -184,15 +188,14 @@ h2 {
   display: block;
 }
 #mathsBtn {
-    border: solid 3px rgb(235, 84, 222);
+    border: solid 3px rgb(228, 55, 213);
     padding: 1em 1.5em 1em 1.5em;
     cursor: pointer;
     margin-bottom: 0;
 }
 
 #sciencesBtn {
-    border: solid 3px rgb(235, 84, 222);
-  
+    border: solid 3px rgb(228, 55, 213);
     padding: 1em;
     cursor: pointer;
     margin-top: 0;
@@ -200,7 +203,7 @@ h2 {
 }
 
 #mathsBtn:hover ,#sciencesBtn:hover {
-    background-color:  rgb(235, 84, 222);
+    background-color:  rgb(231, 135, 223);
 }
 
 #navSection {
