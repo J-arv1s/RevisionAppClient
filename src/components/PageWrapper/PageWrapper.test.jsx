@@ -15,11 +15,11 @@ describe('NavBar Component',() => {
             <PageWrapper />
         </MemoryRouter>
     )
-    it('displays a PageWrapper with 5 children'), () => {}
+    it('displays a PageWrapper with 3 children'), () => {}
         const nav = screen.getByRole('navigation')
 
         expect(nav).toBeInTheDocument()
-        expect(nav.childNodes.length).toBe(5)
+        expect(nav.childNodes.length).toBe(3)
 }
 )
 
