@@ -1,31 +1,14 @@
 import React from 'react'
 import '../index.css'
 import { Link } from 'react-router-dom';
+import { SubjectList } from '../../components';
 
 const ProfilePage = () => {
   const username = localStorage.getItem("username");
   return (
     <>
     <section id="firstSection">
-        <div className="subjects">  
-          <h1>Subjects</h1>
-          <div className='buttons'>
-            <p id="mathsBtn" >Maths</p>
-            <div className="buttons-content">
-            <Link to="/quiz">Quiz 1</Link>
-              <a href="#">Quiz 2</a>
-              <a href="#">Quiz 3</a>
-            </div>
-          </div>
-          <div className='buttons1'>
-            <p id="sciencesBtn">Sciences</p>
-            <div className="buttons1-content">
-              <Link to="/quiz">Quiz 1</Link>
-              <a href="#">Quiz 2</a>
-              <a href="#">Quiz 3</a>
-            </div>
-          </div>
-        </div>
+        <SubjectList />
       </section>
       <section id='profileDisplay'>
         <h2>Hi there, {username} !</h2>
