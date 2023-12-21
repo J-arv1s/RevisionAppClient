@@ -6,13 +6,13 @@ import { screen, render, cleanup } from '@testing-library/react';
 import matchers from '@testing-library/jest-dom/matchers';
 expect.extend(matchers);
 
-import TeacherQuizesPage from '.';
+import TeacherQuizzesPage from '.';
 import { BrowserRouter } from 'react-router-dom';
 
-describe('TeacherQuizesPage Component', () => {
+describe('TeacherQuizzesPage Component', () => {
   beforeEach(() => {
     render(
-    <BrowserRouter> <TeacherQuizesPage /></BrowserRouter>
+    <BrowserRouter> <TeacherQuizzesPage /></BrowserRouter>
    )
   })
 

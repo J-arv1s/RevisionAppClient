@@ -25,9 +25,14 @@ const LoginPage = () => {
       if (response.ok) {
         localStorage.setItem("token", data.token)
         localStorage.setItem("username", username);
+        localStorage.setItem("isAdmin", data.isAdmin)
         setLoginMessage('Login successful. Redirecting...');
         setTimeout(() => {
-          navigate('/quiz');
+          if(data.isAdmin === true){
+            navigate('/teacherHome');
+          }else
+            navigate('/profile');
+          
         }, 3000); 
       } else {
         console.error('Login failed:', data.error);
@@ -54,7 +59,6 @@ const LoginPage = () => {
     justifyContent: 'space-evenly', 
     height: '100vh',
     width: '100%',
-    backgroundColor: 'rgb(238, 153, 234)',
   };
   
   const formStyle = {

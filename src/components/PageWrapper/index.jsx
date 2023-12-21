@@ -21,11 +21,13 @@ const PageWrapper = () => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("username");
+    localStorage.removeItem("isAdmin");
     navigate("/");
   };
 
   const isLoggedIn = !!localStorage.getItem("token");
-
+  const isAdmin = localStorage.getItem("isAdmin") === "true";
+ 
   return (
     <header style={{ marginBottom: "20px" }}>
      <nav style={navBarStyle}>
@@ -34,7 +36,7 @@ const PageWrapper = () => {
             Register
           </NavLink>
         )}
-         {isLoggedIn && (
+         {isLoggedIn && !isAdmin && (
           <NavLink to="/profile" style={linkStyle}>
             Profile
           </NavLink>
@@ -47,7 +49,7 @@ const PageWrapper = () => {
           Quiz
         </NavLink>
         )}
-        {isLoggedIn && (
+        {isLoggedIn && isAdmin && (
         <NavLink to="/teacherHome" style={linkStyle}>
           Teacher
         </NavLink>
