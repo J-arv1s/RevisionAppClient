@@ -3,9 +3,11 @@ import '../index.css'
 import { Link } from 'react-router-dom';
 
 const ProfilePage = () => {
+
+  /*const username = localStorage.getItem("username", username);*/
+
   return (
     <>
-    <main>
     <section id="firstSection">
         <div className="subjects">  
           <h1>Subjects</h1>
@@ -27,28 +29,15 @@ const ProfilePage = () => {
           </div>
         </div>
       </section>
-      <div>
-      <h2>Hi there, [studentname]</h2>
-      <p>Check your results below</p>
-    </div>
-    <table>
-      <tr>
-        <th></th>
-        <th>Status</th>
-        <th>Result</th>
-      </tr>
-      <tr>
-        <td>[Maths Quiz1]</td>
-        <td>Completed</td>
-        <td>90%</td>
-      </tr>
-      <tr>
-        <td>[Maths Quiz2]</td>
-        <td>Not Complete</td>
-        <td>-</td>
-      </tr>
-    </table>
-    </main>
+      <section id='profileDisplay'>
+        <h2>Hi there, !</h2>
+        <div className='studentDisplay'>
+          <p>This is your revision app profile</p>
+          <p>This app was created to improve your revision</p>
+          <p>Please have a look through all the pages so you can get used to the interface</p>
+          <p>Good Luck!!</p>
+        </div>
+      </section>
     </>
   )
 }
