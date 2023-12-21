@@ -39,7 +39,6 @@ const TeacherStudentPage = () => {
       <table>
         <tr>
           <th>Username</th>
-          <th>T</th>
         </tr>
         {
         users

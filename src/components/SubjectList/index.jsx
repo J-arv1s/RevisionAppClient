@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import './index.css'
 
 const SubjectList = ({ onQuizSelected }) => {
 //////////////////////////////
@@ -29,14 +30,14 @@ const SubjectList = ({ onQuizSelected }) => {
           <h1>Subjects</h1>
           <div className='buttons'>
             { subjects.map((subject) => (
-                <button key={subject._id} onClick={() => fetchRelatedQuizes(subject.subjectName)}> {subject.subjectName} </button>
+                <button id='subjectsBtn' key={subject._id} onClick={() => fetchRelatedQuizes(subject.subjectName)}> {subject.subjectName} </button>
                 ))}
           </div>
           {singleSubject && (
             <>
-            <p>Details for {singleSubject.subjectName} subject</p>
+            <p>{singleSubject.subjectName} Quizzes:</p>
             { singleSubject.quizzesId.map((quiz) => (
-              <button key={quiz._id} onClick={() => onQuizSelected(quiz.quizName)}>{quiz.quizName}</button>
+              <button id='quizzesBtn' key={quiz._id} onClick={() => onQuizSelected(quiz.quizName)}>{quiz.quizName}</button>
             ))}
             </>
           )}
