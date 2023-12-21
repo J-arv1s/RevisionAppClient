@@ -8,7 +8,7 @@ const TeacherHomePage = () => {
         <section id="teacher">
             <div className='buttons'>
                 <Link id='link1' to="/subjects">Subjects</Link>
-                <Link id='link2'to="/quizes">Quizes</Link>
+                <Link id='link2'to="/quizzes">Quizzes</Link>
             </div>
             <div>
                 <Link id='link3' to="/students">Students</Link>

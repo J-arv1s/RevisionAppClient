@@ -7,14 +7,14 @@ const SubjectsPage = () => {
   const [subjects, setSubjects] = useState([]);
 
   const fetchSubjects = () => {
-    fetch('http://localhost:3000/subjects')
+    fetch('https://revision-app-2b5p.onrender.com/subjects')
       .then(response => response.json())
       .then(data => setSubjects(data))
       .catch(error => console.error('Error fetching subjects:', error));
   };
 
   const handleAddSubject = () => {
-    fetch('http://localhost:3000/subjects', {
+    fetch('https://revision-app-2b5p.onrender.com/subjects', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ subjectName: newSubjectName })
