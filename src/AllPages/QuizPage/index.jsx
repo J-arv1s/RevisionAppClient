@@ -91,7 +91,7 @@ const QuizPage = () => {
             <div className="quiz">
               <p>{currentQuestion.question}</p>
               {answers.map((answer, index) => (
-                  <button
+                  <button className='ans'
                     key={index}
                     onClick={() => handleAnswerClick(answer)}
                     style={{
@@ -112,7 +112,7 @@ const QuizPage = () => {
                 ))}
                 <div className="move">
                   {!showScore && (
-                    <button onClick={handleNextClick}>Next</button>
+                    <button className='nextBtn' onClick={handleNextClick}>Next</button>
                   )}
                 </div>
               </div>

@@ -51,16 +51,16 @@ const TeacherQuizzesPage = () => {
     <>
         <section id="teacher1">
             <div className='first'>
-                <h2 id='h2Quiz'>Quizzes</h2>
+                <h1 id='h2Quiz'>Quizzes</h1>
                 <form>
-                <label>New Quizname : 
-                    <input type='text'
+                <label id='label1'>New Quizname :
+                    <input placeholder="input1" type='text'
                         name='quizname'
                         value={newQuizName}
                         onChange={handleNewQuizName}/>
                 </label>
-                <label>Assign subject : 
-                    <input type='text'
+                <label id='label2'>Assign subject : 
+                    <input placeholder="input2" type='text'
                         name='subject'
                         value={assignedSubject}
                         onChange={handleAssignedSubject}/>
