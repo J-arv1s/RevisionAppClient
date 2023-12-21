@@ -10,15 +10,29 @@ const QuizPage = () => {
   const [score, setScore] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
   const [showScore, setShowScore] = useState(false);
+  const [subjects, setSubjects] = useState([]);
+  const [selectedSubject, setSelectedSubject] = useState(null)
 
   const shuffleAnswers = (correctAnswer, wrongAnswers) => {
     const allAnswers = [correctAnswer, ...wrongAnswers];
     return allAnswers.sort(() => Math.random() - 0.5);
   };
 
+  useEffect(() => {
+    fetch('https://revision-app-2b5p.onrender.com/subjects')
+      .then(response => response.json())
+      .then(data => {
+        setSubjects(data);
+      })
+      .catch(error => console.error('Error fetching subjects:', error));
+
+    fetchQuizData(); 
+  }, []);
+
+  console.log()
   const fetchQuizData = async () => {
     try {
-      const response = await fetch('http://localhost:3000/quizzes/science-quiz');
+      const response = await fetch(`https://revision-app-2b5p.onrender.com/quizzes/science-quiz`);
       const data = await response.json();
       setQuestions(data.questions);
       setAnswers(shuffleAnswers(data.questions[0].answer, data.questions[0].wrongAnswers));
@@ -26,6 +40,10 @@ const QuizPage = () => {
       console.error('Error fetching quiz data:', error);
     }
   };
+  // const handleSubjectSelection = (quizName) => {
+  //   setSelectedSubject(quizName);
+  //   fetchQuizData(quizName);
+  // };
 
   const handleAnswerClick = (answer) => {
     setSelectedAnswer(answer);
@@ -62,30 +80,26 @@ const QuizPage = () => {
     <>
       <section id="main">
       <section id="firstSection">
-        <div className="subjects">  
-          <h1>Subjects</h1>
-          <div className='buttons'>
-            <p id="mathsBtn" >Maths</p>
-            <div className="buttons-content">
-            <Link to="/quiz">Quiz 1</Link>
-              <a href="#">Quiz 2</a>
-              <a href="#">Quiz 3</a>
-            </div>
+          <div className="subjects">  
+            <h1>Subjects</h1>
+            {subjects.map((subject, index) => (
+              <div key={index} className='buttons'>
+                <Link>{subject.subjectName}</Link>
+                <div className="buttons-content">
+                  {subject.quizzesId.map((quiz, quizId) => (
+                    <button key={quiz._id} onClick={() => handleSubjectSelection(quiz.quizId)}>
+                      {quiz.quizId}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
-          <div className='buttons1'>
-            <p id="sciencesBtn">Sciences</p>
-            <div className="buttons1-content">
-              <Link to="/quiz">Quiz 1</Link>
-              <a href="#">Quiz 2</a>
-              <a href="#">Quiz 3</a>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
         <section id="middle1">
           {currentQuestion ? (
             <>
-              <h2>{currentQuestion.quizName}</h2>
+              <h2>{currentQuestion}</h2>
               <p>Score: {score}</p>
               <div className="quiz">
                 <p>{currentQuestion.question}</p>
