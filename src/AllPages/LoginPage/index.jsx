@@ -24,6 +24,7 @@ const LoginPage = () => {
 
       if (response.ok) {
         localStorage.setItem("token", data.token)
+        localStorage.setItem("username", username);
         setLoginMessage('Login successful. Redirecting...');
         setTimeout(() => {
           navigate('/quiz');
