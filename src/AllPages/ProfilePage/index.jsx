@@ -3,9 +3,7 @@ import '../index.css'
 import { Link } from 'react-router-dom';
 
 const ProfilePage = () => {
-
-  /*const username = localStorage.getItem("username", username);*/
-
+  const username = localStorage.getItem("username");
   return (
     <>
     <section id="firstSection">
@@ -30,7 +28,7 @@ const ProfilePage = () => {
         </div>
       </section>
       <section id='profileDisplay'>
-        <h2>Hi there, !</h2>
+        <h2>Hi there, {username} !</h2>
         <div className='studentDisplay'>
           <p>This is your revision app profile</p>
           <p>This app was created to improve your revision</p>
