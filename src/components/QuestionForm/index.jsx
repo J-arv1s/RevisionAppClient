@@ -60,7 +60,7 @@ const QuestionForm = ({ onSubmit }) => {
         />
       </label>
       <label>
-        Wrong Answers (comma-separated):
+        Wrong Answers, please seperate with ,:
         <input
           type='text'
           name='wrongAnswers'

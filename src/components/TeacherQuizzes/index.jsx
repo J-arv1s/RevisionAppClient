@@ -21,9 +21,7 @@ const TeacherQuizzes = ({ quizzes, setQuizzes }) => {
     const handleView = ({ quiz }) => {
         setSelectedQuiz(quiz.quizName)
         setQuestionArr(quiz.questions)
-        if(listVisible){
-            setListVisible(false)
-        }else{
+        if(!listVisible){
             setListVisible(true)
             setFormVisible(false)
         }
@@ -31,9 +29,7 @@ const TeacherQuizzes = ({ quizzes, setQuizzes }) => {
 
     const handleEdit = ({ quiz }) => {
         setSelectedQuiz(quiz.quizName)
-        if(formVisible){
-            setFormVisible(false)
-        }else{
+        if(!formVisible){
             setFormVisible(true)
             setListVisible(false)
         }
