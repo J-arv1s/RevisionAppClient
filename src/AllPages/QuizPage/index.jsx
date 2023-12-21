@@ -18,7 +18,7 @@ const QuizPage = () => {
 
   const fetchQuizData = async () => {
     try {
-      const response = await fetch('http://localhost:3000/quizzes/science-quiz');
+      const response = await fetch('https://revision-app-2b5p.onrender.com/quizzes/science-quiz');
       const data = await response.json();
       setQuestions(data.questions);
       setAnswers(shuffleAnswers(data.questions[0].answer, data.questions[0].wrongAnswers));
@@ -81,6 +81,7 @@ const QuizPage = () => {
             </div>
           </div>
         </div>
+
       </section>
         <section id="middle1">
           {currentQuestion ? (
@@ -102,7 +103,7 @@ const QuizPage = () => {
                               ? 'red'
                               : ''
                           : '',
-                      color: showAnswer || selectedAnswer === answer ? 'white' : 'black',
+                      color: showAnswer || selectedAnswer === answer ? 'black' : 'white',
                     }}
                     disabled={showAnswer}
                   >

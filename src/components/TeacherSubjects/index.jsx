@@ -3,7 +3,7 @@ import TeacherSubject from '../TeacherSubject';
 
 const TeacherSubjects = ({ subjects, setSubjects }) => {
   const handleDelete = (subjectName) => {
-    fetch(`http://localhost:3000/subjects/${subjectName}`, { method: 'DELETE' })
+    fetch(`https://revision-app-2b5p.onrender.com/subjects/${subjectName}`, { method: 'DELETE' })
       .then(() => {
         console.log(`${subjectName} deleted`);
         setSubjects(subjects.filter(subject => subject.subjectName !== subjectName));

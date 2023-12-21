@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&family=Manrope&family=Nunito+Sans:opsz,wght@6..12,300&display=swap');
 
 body {
-    background-color: rgb(238, 153, 234);
+    background: linear-gradient(90deg, rgba(167, 0, 255, 1), rgba(230, 143, 255, 1));
     margin: 0;
     font-family: 'Nunito Sans', sans-serif;
 }
@@ -174,18 +174,19 @@ body {
 }
 
 
-.quiz { 
+.quiz {
     display: flex;
     gap: 1em;
     flex-direction: column;
-    padding:30px 70px 30px 70px;
-    /*background-color: rgb(118, 47, 185);*/
-    background-color: rgb(240, 122, 76);
+    padding: 30px 70px;
+    /* background-color: #e249a2;  */
+    /* background-color: #9C27B0; */
     border-radius: 15px;
-}
+  }
 
 .quiz p {
     font-size:30px;
+    color: white;
 }
 
 .quiz button {
@@ -199,13 +200,10 @@ body {
 }
 
 .subjects {
-    /*padding-bottom: 25.6em;*/
-    /*background-color: rgb(143, 54, 226);*/
-    background-color: #dd49b1;
+    background-color: #9605af;
     padding-left: 4em;
     padding-right: 4em;
     height: 100%;
-   /* width: 160px; /* Set the width of the sidebar */
     position: fixed; 
     gap:1em;
 }
@@ -214,11 +212,13 @@ body {
     font-size: 45px;
     font-style: italic;
     margin-top: 3em;
+    color: white;
 }
 
 h2 {
     margin-top: 3em;
     font-size: 43px;
+    color: white;
 }
 
 .registerForm h2 {
@@ -298,15 +298,21 @@ h2 {
 }
 
 .quiz button {
-   background-color: rgb(235, 79, 17);
-   border-radius: 7px;
-   cursor: pointer;
-   border-style: none;
-}
+    /* background-color: #9C27B0; */
+    background-color: #9605af;;;
+    border: none;
+    border-radius: 7px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
 
-.quiz button:hover {
-    background-color: rgb(230, 90, 35);
-}
+  
+  .quiz button:hover {
+    background-color: #7B1FA2;
+  }
 
 #navSection {
     border-bottom: solid 2px blueviolet;
@@ -337,7 +343,7 @@ h2 {
 
 .buttons-content a {
   text-decoration: none;
-  color:black;
+  color:rgb(255, 255, 255);
   display: block;
 }
 
@@ -378,27 +384,33 @@ h2 {
 
 .buttons1-content a {
   text-decoration: none;
-  color:black;
+  color:rgb(255, 255, 255);
   display: block;
 }
+
 #mathsBtn {
-    border: solid 3px rgb(114, 28, 107);
-    padding: 1em 1.5em 1em 1.5em;
+    border: 3px solid white;
+    padding: 10px 15px;
     cursor: pointer;
     margin-bottom: 0;
+    color: white;
+    font-size: 20px;
+    background-color: transparent;
 }
 
 #sciencesBtn {
-    border: solid 3px rgb(114, 28, 107);
-    padding: 1em;
+    border: 3px solid white;
+    padding: 10px;
     cursor: pointer;
     margin-top: 0;
     margin-bottom: 0;
+    color: white;
+    font-size: 20px;
+    background-color: transparent;
 }
 
 #mathsBtn:hover ,#sciencesBtn:hover {
-    background-color:  rgb(228, 114, 218);
- 
+    background-color: rgb(228, 114, 218);
 }
 
 #navSection {

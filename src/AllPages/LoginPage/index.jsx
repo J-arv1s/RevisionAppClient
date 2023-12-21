@@ -12,7 +12,7 @@ const LoginPage = () => {
     event.preventDefault();
     
     try {
-      const response = await fetch('http://localhost:3000/users/login', {
+      const response = await fetch('https://revision-app-2b5p.onrender.com/users/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -59,7 +59,6 @@ const LoginPage = () => {
     justifyContent: 'space-evenly', 
     height: '100vh',
     width: '100%',
-    backgroundColor: 'rgb(238, 153, 234)',
   };
   
   const formStyle = {
