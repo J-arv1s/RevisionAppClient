@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 
-const SubjectList = () => {
+const SubjectList = ({ onQuizSelected }) => {
 //////////////////////////////
   const [subjects, setSubjects] = useState([]);
 
@@ -36,7 +36,7 @@ const SubjectList = () => {
             <>
             <p>Details for {singleSubject.subjectName} subject</p>
             { singleSubject.quizzesId.map((quiz) => (
-              <p key={quiz._id}>{quiz.quizName}</p>
+              <button key={quiz._id} onClick={() => onQuizSelected(quiz.quizName)}>{quiz.quizName}</button>
             ))}
             </>
           )}
