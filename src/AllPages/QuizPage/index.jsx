@@ -87,7 +87,7 @@ const QuizPage = () => {
           {currentQuestion ? (
             <>
               <h2>{currentQuestion.quizName}</h2>
-              <p>Score: {score}</p>
+              <p id="score">Score: {score}</p>
               <div className="quiz">
                 <p>{currentQuestion.question}</p>
                 {answers.map((answer, index) => (

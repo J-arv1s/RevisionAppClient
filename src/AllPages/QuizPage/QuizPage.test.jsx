@@ -12,7 +12,9 @@ import { BrowserRouter } from 'react-router-dom';
 describe('Quiz Component', () => {
   beforeEach(() => {
     render(
-    <BrowserRouter> <QuizPage /></BrowserRouter>
+      <BrowserRouter>
+   <QuizPage />
+   </BrowserRouter>
    )
   })
 
@@ -20,9 +22,14 @@ describe('Quiz Component', () => {
     cleanup()
   })
 
-  it('h2 displays quizname', () => {
-    const h2 = document.querySelector('h2')
-    expect(h2.innerHTML).toContain('quizname')
+  it('h1 displays Subjects', () => {
+    const display = screen.getByRole('heading')
+    expect(display.textContent).toBe('Subjects')
   })
+
+  it('displays h1 with Subjects text'), () => {
+    const h1 = screen.getByText('Subjects');
+    expect(h1).toBeInTheDocument();
+  }
 
 })

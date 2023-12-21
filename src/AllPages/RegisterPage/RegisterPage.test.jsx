@@ -5,12 +5,15 @@ import { screen, render, cleanup } from '@testing-library/react';
 
 import matchers from '@testing-library/jest-dom/matchers';
 expect.extend(matchers);
+import { BrowserRouter } from 'react-router-dom';
 
 import RegisterPage from '.';
+   
 
 describe('Register Component', () => {
   beforeEach(() => {
-    render(<RegisterPage />)
+    render(
+      <BrowserRouter> <RegisterPage /> </BrowserRouter>)
   })
 
   afterEach(() => {
