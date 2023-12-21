@@ -6,11 +6,104 @@ body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
+.first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#quizes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:1em;
+}
+
+#quizes button {
+    background-color:  #4A90E2;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 20px 40px 20px 40px;
+    border-radius: 6px ;
+    border: solid 3px  rgb(48, 106, 161);
+   /* border-style: none;*/
+    text-decoration: none;
+    color: rgb(56, 53, 53);
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+#quizes button:hover, #addQuiz:hover{
+    background-color: #a7c5e7;
+}
+
+#quizes .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:1em;
+}
+
+#addQuiz {
+    background-color:  #4A90E2;
+    cursor: pointer;
+    font-size: 22px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 6px ;
+    border: solid 3px  rgb(48, 106, 161);
+   /* border-style: none;*/
+    text-decoration: none;
+    color: rgb(56, 53, 53);
+    font-family: 'Nunito Sans', sans-serif;
+    margin-bottom: 1em;
+}
+
+
+
+#teacher1 {
+    margin-top: 15em;
+    gap:1em;
+    display: flex;
+    flex-direction: column;
+}
+
+#teacher {
+    margin-top: 15em;
+    gap:3em;
+    display: flex;
+    flex-direction: column;
+}
+
+#teacher .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3em;
+}
+
+#teacher #link1, #link2, #link3 {
+    cursor: pointer;
+    font-size: 24px;
+    padding: 30px 60px 30px 60px;
+    border-radius: 6px ;
+    border: solid 3px  rgb(48, 106, 161);
+   /* border-style: none;*/
+    background-color: #4A90E2;
+    text-decoration: none;
+    color: rgb(56, 53, 53);
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+#teacher #link1:hover,#teacher #link2:hover,#teacher #link3:hover {
+   background-color: #a7c5e7;
+}
+  
+
 .move {
     display: flex;
     flex-direction: row;
     gap:5em;
 }
+
 
 .quiz { 
     display: flex;
@@ -63,6 +156,10 @@ h2 {
     margin-top: 0em;
 }
 
+#h2Quiz {
+    margin-top: 0em;  
+}
+
 #middle {
     display: flex;
     justify-content: center;
@@ -79,7 +176,7 @@ h2 {
 .registerForm {
     background-color: rgb(255, 255, 255);
     margin-top: 12em;
-   /* box-shadow: 0 2px 4px white;*/
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     border-radius: 10px;
     display:flex;
     justify-content: center;
