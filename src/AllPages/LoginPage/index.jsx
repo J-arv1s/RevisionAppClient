@@ -25,9 +25,14 @@ const LoginPage = () => {
       if (response.ok) {
         localStorage.setItem("token", data.token)
         localStorage.setItem("username", username);
+        localStorage.setItem("isAdmin", data.isAdmin)
         setLoginMessage('Login successful. Redirecting...');
         setTimeout(() => {
-          navigate('/quiz');
+          if(data.isAdmin === true){
+            navigate('/teacherHome');
+          }else
+            navigate('/profile');
+          
         }, 3000); 
       } else {
         console.error('Login failed:', data.error);
