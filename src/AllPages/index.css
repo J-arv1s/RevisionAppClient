@@ -231,7 +231,8 @@ h2 {
 }
 
 .registerForm h2 {
-  margin-top: 0em;
+    color: black;
+    margin-top: 0em;
 }
 
 #h2Quiz {
