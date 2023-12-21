@@ -41,11 +41,12 @@ const PageWrapper = () => {
         <NavLink to="/leaderboard" style={linkStyle}>
           Leaderboard
         </NavLink>
-        {isLoggedIn && (
-          <NavLink to="/quiz" style={linkStyle}>
-            Quiz
-          </NavLink>
-        )}
+        <NavLink to="/quiz" style={linkStyle}>
+          Quiz
+        </NavLink>
+        <NavLink to="/teacherHome" style={linkStyle}>
+          Teacher
+        </NavLink>
         {isLoggedIn ? (
           <NavLink to="/" style={linkStyle} onClick={handleLogout}>
             Logout
