@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import '../index.css'
 
 const LeaderboardPage = () => {
 
@@ -34,7 +35,6 @@ const LeaderboardPage = () => {
         </tr>
         {
         users
-        .filter(entry => !entry.isAdmin)
         .map((entry, i) => (
           <tr key={i}>
             <td>{ entry.username }</td>

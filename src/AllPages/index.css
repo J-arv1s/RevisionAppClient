@@ -18,6 +18,22 @@ body {
     margin-left: 18em;
 }
 
+.leaderboard {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left:15em;
+    margin-right:15em;
+}
+
+.leaderboard table,td, tr  {
+    border: 3px solid rgb(167, 24, 185);
+    font-size: 22px;
+     
+    box-shadow: 8px 10px 8px rgba(23, 19, 24, 0.1);
+   color: #241c21;
+}
+
 .students {
     display: flex;
    justify-content: center;
@@ -58,7 +74,6 @@ body {
   font-size: 18px;
 
 }
-
 
 .first{
     display: flex;
