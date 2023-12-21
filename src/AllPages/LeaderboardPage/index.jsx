@@ -26,7 +26,7 @@ const LeaderboardPage = () => {
 
   return (
     <div className="leaderboard">
-      <h2>Leaderboard</h2>
+    <h2>Leaderboard</h2>
       <table>
         <tr>
           <th>User</th>
