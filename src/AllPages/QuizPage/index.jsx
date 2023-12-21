@@ -12,27 +12,45 @@ const QuizPage = () => {
   const [showScore, setShowScore] = useState(false);
   const [subjects, setSubjects] = useState([]);
   const [selectedSubject, setSelectedSubject] = useState(null)
+  const [subjectNames, setSubjectNames] = useState([])
+
 
   const shuffleAnswers = (correctAnswer, wrongAnswers) => {
     const allAnswers = [correctAnswer, ...wrongAnswers];
     return allAnswers.sort(() => Math.random() - 0.5);
   };
 
+  // fetch all subjects
+  // fetch sub/name
+  // quiz names got
+  
   useEffect(() => {
     fetch('https://revision-app-2b5p.onrender.com/subjects')
       .then(response => response.json())
       .then(data => {
-        setSubjects(data);
+        // setSubjects(data);
+        setSubjectNames(data)
+        console.log(subjectNames)
+        
       })
       .catch(error => console.error('Error fetching subjects:', error));
-
-    fetchQuizData(); 
+    // fillSubjects()
   }, []);
 
+  const fillSubjects = async (subjectName) => {
+    fetch(`https://revision-app-2b5p.onrender.com/subjects/${subjectName}`)
+    .then(response => response.json())
+    .then(data => {
+      console.log(data)
+    })
+    .catch(error => console.error('Error fecting subjectQuizzes', error))
+  }
+
+
   console.log()
-  const fetchQuizData = async () => {
+  const fetchQuizData = async (quizName) => {
     try {
-      const response = await fetch(`https://revision-app-2b5p.onrender.com/quizzes/science-quiz`);
+      const response = await fetch(`https://revision-app-2b5p.onrender.com/quizzes/${quizName}`);
       const data = await response.json();
       setQuestions(data.questions);
       setAnswers(shuffleAnswers(data.questions[0].answer, data.questions[0].wrongAnswers));
@@ -40,10 +58,10 @@ const QuizPage = () => {
       console.error('Error fetching quiz data:', error);
     }
   };
-  // const handleSubjectSelection = (quizName) => {
-  //   setSelectedSubject(quizName);
-  //   fetchQuizData(quizName);
-  // };
+  const handleSubjectSelection = (quizName) => {
+    setSelectedSubject(quizName);
+    fetchQuizData(quizName);
+  };
 
   const handleAnswerClick = (answer) => {
     setSelectedAnswer(answer);
@@ -84,11 +102,11 @@ const QuizPage = () => {
             <h1>Subjects</h1>
             {subjects.map((subject, index) => (
               <div key={index} className='buttons'>
-                <Link>{subject.subjectName}</Link>
+                <p>{subject.subjectName}</p>
                 <div className="buttons-content">
-                  {subject.quizzesId.map((quiz, quizId) => (
-                    <button key={quiz._id} onClick={() => handleSubjectSelection(quiz.quizId)}>
-                      {quiz.quizId}
+                  {subject.quizzesId.map((quiz) => (
+                    <button key={quiz._id} onClick={() => handleSubjectSelection(quiz._id)}>
+                      {quiz._id}
                     </button>
                   ))}
                 </div>
