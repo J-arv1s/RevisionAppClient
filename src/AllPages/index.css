@@ -6,6 +6,30 @@ body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
+
+#profileDisplay {
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    flex-direction: column;
+    margin-top: 13em; 
+    background-color: white;
+    border-radius: 10px; 
+    margin-left: 18em;
+}
+
+.studentDisplay  {
+    margin-left: 30px;
+    padding-bottom: 5em;
+    
+}
+
+.studentDisplay p {
+  font-size: 18px;
+
+}
+
+
 .first{
     display: flex;
     justify-content: center;
@@ -227,6 +251,7 @@ h2 {
 #middle1 h2 {
     margin-top: 2em;
 }
+
 .quiz button {
    background-color: rgb(235, 79, 17);
    border-radius: 7px;
