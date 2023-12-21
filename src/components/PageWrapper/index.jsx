@@ -27,8 +27,7 @@ const PageWrapper = () => {
 
   const isLoggedIn = !!localStorage.getItem("token");
   const isAdmin = localStorage.getItem("isAdmin") === "true";
-  const isNotAdmin = localStorage.getItem("isAdmin") === "false";
-
+ 
   return (
     <header style={{ marginBottom: "20px" }}>
      <nav style={navBarStyle}>
