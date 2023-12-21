@@ -1,21 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&family=Manrope&family=Nunito+Sans:opsz,wght@6..12,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic&family=Manrope&family=Nunito+Sans:opsz,wght@6..12,300&display=swap");
 
 body {
-    background: linear-gradient(90deg, rgba(167, 0, 255, 1), rgba(230, 143, 255, 1));
-    margin: 0;
-    font-family: 'Nunito Sans', sans-serif;
+  background: linear-gradient(
+    90deg,
+    rgba(167, 0, 255, 1),
+    rgba(230, 143, 255, 1)
+  );
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
 }
 
-
 #profileDisplay {
-    display: flex;
-    justify-content: center;
-    align-items:  center;
-    flex-direction: column;
-    margin-top: 13em; 
-    background-color: white;
-    border-radius: 10px; 
-    margin-left: 18em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 13em;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 18em;
 }
 
 .leaderboard {
@@ -35,44 +38,42 @@ body {
 }
 
 .students {
-    display: flex;
-   justify-content: center;
-   flex-direction: column;
-   margin-left: 30em;
-   margin-right: 30em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 30em;
+  margin-right: 30em;
 }
 
-.students table { 
-    font-size: 22px;
-    border: none;
+.students table {
+  font-size: 22px;
+  border: none;
 }
 
 #removeBtn {
-   margin-top: 10px;
-    background-color:  #4A90E2;
-    cursor: pointer;
-    font-size: 20px;
-    padding: 10px 30px 10px 30px;
-    border-radius: 6px ;
-    border: solid 3px  rgb(48, 106, 161);
-    /* border-style: none;*/
-    text-decoration: none;
-    color: rgb(56, 53, 53);
-    font-family: 'Nunito Sans', sans-serif;
+  margin-top: 10px;
+  background-color: #4a90e2;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px 30px 10px 30px;
+  border-radius: 6px;
+  border: solid 3px rgb(48, 106, 161);
+  /* border-style: none;*/
+  text-decoration: none;
+  color: rgb(56, 53, 53);
+  font-family: "Nunito Sans", sans-serif;
 }
 
 #removeBtn:hover {
-    background-color: #a7c5e7;
+  background-color: #a7c5e7;
 }
-.studentDisplay  {
-    margin-left: 30px;
-    padding-bottom: 5em;
-    
+.studentDisplay {
+  margin-left: 30px;
+  padding-bottom: 5em;
 }
 
 .studentDisplay p {
   font-size: 18px;
-
 }
 
 .first{
@@ -80,145 +81,153 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  
 }
 #quizes {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap:1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
 }
 
 #quizes button {
-    background-color:  #4A90E2;
-    cursor: pointer;
-    font-size: 24px;
-    padding: 20px 40px 20px 40px;
-    border-radius: 6px ;
-    border: solid 3px  rgb(48, 106, 161);
-   /* border-style: none;*/
-    text-decoration: none;
-    color: rgb(56, 53, 53);
-    font-family: 'Nunito Sans', sans-serif;
+  background-color: #4a90e2;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 20px 40px 20px 40px;
+  border-radius: 6px;
+  border: solid 3px rgb(48, 106, 161);
+  /* border-style: none;*/
+  text-decoration: none;
+  color: rgb(56, 53, 53);
+  font-family: "Nunito Sans", sans-serif;
 }
 
-#quizes button:hover, #addQuiz:hover{
-    background-color: #a7c5e7;
+#quizes button:hover,
+#addQuiz:hover {
+  background-color: #a7c5e7;
 }
 
 #quizes .buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap:1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1em;
 }
 
 #addQuiz {
-    background-color:  #4A90E2;
-    cursor: pointer;
-    font-size: 22px;
-    padding: 10px 30px 10px 30px;
-    border-radius: 6px ;
-    border: solid 3px  rgb(48, 106, 161);
-   /* border-style: none;*/
-    text-decoration: none;
-    color: rgb(56, 53, 53);
-    font-family: 'Nunito Sans', sans-serif;
-    margin-bottom: 1em;
+  background-color: #4a90e2;
+  cursor: pointer;
+  font-size: 22px;
+  padding: 10px 30px 10px 30px;
+  border-radius: 6px;
+  border: solid 3px rgb(48, 106, 161);
+  /* border-style: none;*/
+  text-decoration: none;
+  color: rgb(56, 53, 53);
+  font-family: "Nunito Sans", sans-serif;
+  margin-bottom: 1em;
 }
 
-
-
 #teacher1 {
-    margin-top: 15em;
-    gap:1em;
-    display: flex;
-    flex-direction: column;
+  margin-top: 15em;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
 }
 
 #teacher {
-    margin-top: 15em;
-    gap:3em;
-    display: flex;
-    flex-direction: column;
+  margin-top: 15em;
+  gap: 3em;
+  display: flex;
+  flex-direction: column;
 }
 
 #teacher .buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3em;
 }
 
-#teacher #link1, #link2, #link3 {
-    cursor: pointer;
-    font-size: 24px;
-    padding: 30px 60px 30px 60px;
-    border-radius: 6px ;
-    border: solid 3px  rgb(48, 106, 161);
-   /* border-style: none;*/
-    background-color: #4A90E2;
-    text-decoration: none;
-    color: rgb(56, 53, 53);
-    font-family: 'Nunito Sans', sans-serif;
+#teacher #link1,
+#link2,
+#link3 {
+  cursor: pointer;
+  font-size: 24px;
+  padding: 30px 60px 30px 60px;
+  border-radius: 6px;
+  border: solid 3px rgb(48, 106, 161);
+  /* border-style: none;*/
+  background-color: #4a90e2;
+  text-decoration: none;
+  color: rgb(56, 53, 53);
+  font-family: "Nunito Sans", sans-serif;
 }
 
-#teacher #link1:hover,#teacher #link2:hover,#teacher #link3:hover {
-   background-color: #a7c5e7;
+#teacher #link1:hover,
+#teacher #link2:hover,
+#teacher #link3:hover {
+  background-color: #a7c5e7;
 }
-  
 
 .move {
-    display: flex;
-    flex-direction: row;
-    gap:5em;
+  display: flex;
+  flex-direction: row;
+  gap: 5em;
 }
 
-
 .quiz {
-    display: flex;
-    gap: 1em;
-    flex-direction: column;
-    padding: 30px 70px;
-    /* background-color: #e249a2;  */
-    /* background-color: #9C27B0; */
-    border-radius: 15px;
-  }
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  padding: 30px 70px;
+  /* background-color: #e249a2;  */
+  /* background-color: #9C27B0; */
+  border-radius: 15px;
+}
 
 .quiz p {
-    font-size:30px;
-    color: white;
+  font-size: 30px;
+  color: white;
 }
 
 .quiz button {
-    padding:20px;
-    font-size: 20px;
+  padding: 20px;
+  font-size: 20px;
 }
 
 #firstSection {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .subjects {
-    background-color: #9605af;
-    padding-left: 4em;
-    padding-right: 4em;
-    height: 100%;
-    position: fixed; 
-    gap:1em;
+  background-color: #9605af;
+  padding-left: 4em;
+  padding-right: 4em;
+  height: 100%;
+  position: fixed;
+  gap: 1em;
 }
 
 .subjects h1 {
-    font-size: 45px;
-    font-style: italic;
-    margin-top: 3em;
-    color: white;
+  font-size: 45px;
+  font-style: italic;
+  margin-top: 3em;
+  color: white;
+}
+
+.subjects h2 {
+  margin-top: 3em;
+  font-size: 43px;
+  color: white;
 }
 
 h2 {
-    margin-top: 3em;
-    font-size: 43px;
-    color: white;
+  margin-top: 3em;
+  font-size: 43px;
+  color: rgb(0, 0, 0);
 }
 
 .registerForm h2 {
@@ -227,204 +236,213 @@ h2 {
 }
 
 #h2Quiz {
-    margin-top: 0em;  
+  margin-top: 0em;
 }
 
 #middle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:3em;
-    margin-left: 20em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3em;
+  margin-left: 20em;
 }
 
 #middleRegister {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .registerForm {
-    background-color: rgb(255, 255, 255);
-    margin-top: 12em;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    display:flex;
-    justify-content: center;
-    flex-direction: column;
-    gap:1em; 
-    padding: 50px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 12em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  padding: 50px;
 }
 
 .registerForm form {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 1em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
 }
 
-.registerForm form input[type="text"],input[type="password"] {
-    padding: 13px;
-    font-size: 18px;
+.registerForm form input[type="text"],
+input[type="password"] {
+  padding: 13px;
+  font-size: 18px;
 }
 
 .registerForm form label {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 #buttonSubmit:hover {
-    background-color: rgb(110, 158, 248);
+  background-color: rgb(110, 158, 248);
 }
 
 #buttonSubmit {
-    padding: 13px;
-    font-size: 18px;
-    border-radius: 6px;
-    border-style: none;
-    cursor: pointer;
-    background-color: #4A90E2;
-    font-family: 'Nunito Sans', sans-serif;
+  padding: 13px;
+  font-size: 18px;
+  border-radius: 6px;
+  border-style: none;
+  cursor: pointer;
+  background-color: #4a90e2;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 #middle1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0em 3em 3em 3em;
-    margin-left: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0em 3em 3em 3em;
+  margin-left: 20em;
 }
 
 #middle1 h2 {
-    margin-top: 2em;
+  margin-top: 2em;
 }
 
 .quiz button {
-    /* background-color: #9C27B0; */
-    background-color: #9605af;;;
-    border: none;
-    border-radius: 7px;
-    color: #ffffff;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
-  }
+  /* background-color: #9C27B0; */
+  background-color: #9605af;
+  border: none;
+  border-radius: 7px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
 
-  
-  .quiz button:hover {
-    background-color: #7B1FA2;
-  }
+.quizbutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  height: 65px;
+}
+
+.quiz button:hover {
+  background-color: #7b1fa2;
+}
 
 #navSection {
-    border-bottom: solid 2px blueviolet;
+  border-bottom: solid 2px blueviolet;
 }
 .subjects {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.buttons, .buttons1 {
-    align-items: center;
-    flex-direction: column;
-    font-size: 30px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    display: inline-block;
+.buttons,
+.buttons1 {
+  align-items: center;
+  flex-direction: column;
+  font-size: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: inline-block;
 }
 
 .buttons-content {
-    display: none;
-    text-decoration: none;
-    background-color: rgb(231, 135, 223);
-    z-index: 1;
-    padding: 1em;
-   
-   /* min-width: 160px;
+  display: none;
+  text-decoration: none;
+  background-color: rgb(231, 135, 223);
+  z-index: 1;
+  padding: 1em;
+
+  /* min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
 }
 
 .buttons-content a {
   text-decoration: none;
-  color:rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   display: block;
 }
 
 .buttons-content a:hover {
-    color: rgb(216, 25, 168);
+  color: rgb(216, 25, 168);
 }
 
 .buttons1-content a:hover {
-    color: rgb(216, 25, 168);
+  color: rgb(216, 25, 168);
 }
 
 .buttons:hover .buttons-content {
-    display: flex;
-   /* transition:none 3s;*/
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0;
+  display: flex;
+  /* transition:none 3s;*/
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
 }
 
 .buttons1:hover .buttons1-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
 }
 
 .buttons1-content {
-    display: none;
-    text-decoration: none;
-    background-color: 
-    rgb(231, 135, 223);
-    z-index: 1;
-    padding: 1em;
-   
-   /* min-width: 160px;
+  display: none;
+  text-decoration: none;
+  background-color: rgb(231, 135, 223);
+  z-index: 1;
+  padding: 1em;
+
+  /* min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
 }
 
 .buttons1-content a {
   text-decoration: none;
-  color:rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   display: block;
 }
 
 #mathsBtn {
-    border: 3px solid white;
-    padding: 10px 15px;
-    cursor: pointer;
-    margin-bottom: 0;
-    color: white;
-    font-size: 20px;
-    background-color: transparent;
+  border: 3px solid white;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-bottom: 0;
+  color: white;
+  font-size: 20px;
+  background-color: transparent;
 }
 
 #sciencesBtn {
-    border: 3px solid white;
-    padding: 10px;
-    cursor: pointer;
-    margin-top: 0;
-    margin-bottom: 0;
-    color: white;
-    font-size: 20px;
-    background-color: transparent;
+  border: 3px solid white;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: white;
+  font-size: 20px;
+  background-color: transparent;
 }
 
-#mathsBtn:hover ,#sciencesBtn:hover {
-    background-color: rgb(228, 114, 218);
+#mathsBtn:hover,
+#sciencesBtn:hover {
+  background-color: rgb(228, 114, 218);
 }
 
 #navSection {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-main { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 main p {
@@ -432,21 +450,21 @@ main p {
 }
 
 table {
-    border-collapse: collapse;
-    border: 1px solid #000; /* Border around the table */
-  }
-  
-  th, td {
-    border: 1px solid #000; /* Border for cells */
-    padding: 20px;
-    background-color: #f2f2f2;
-  }
+  border-collapse: collapse;
+  border: 1px solid #000; /* Border around the table */
+}
 
-  
-  th {
-    padding: 20px;
-    background-color: #f2f2f2; /* Background color for header cells */
-  }
-  main table {
-    font-size:25px ;
-  }
+th,
+td {
+  border: 1px solid #000; /* Border for cells */
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+th {
+  padding: 20px;
+  background-color: #f2f2f2; /* Background color for header cells */
+}
+main table {
+  font-size: 25px;
+}
