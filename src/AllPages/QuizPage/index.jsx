@@ -91,7 +91,7 @@ const QuizPage = () => {
               <div className="quiz">
                 <p>{currentQuestion.question}</p>
                 {answers.map((answer, index) => (
-                  <button
+                  <button className='quizbutton'
                     key={index}
                     onClick={() => handleAnswerClick(answer)}
                     style={{
