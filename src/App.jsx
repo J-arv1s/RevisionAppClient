@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 import { Routes, Route } from 'react-router-dom';
 import { PageWrapper } from './components/index'
-import { LoginPage, StudentPage, SubjectsPage, RegisterPage, QuizPage, ProfilePage } from './AllPages'
+import { LoginPage, StudentPage, SubjectsPage, RegisterPage, QuizPage, ProfilePage, LeaderboardPage, TeacherHomePage, TeacherStudentPage, TeacherQuizesPage } from './AllPages'
 import ProtectedRoute from './ProtectedRoute';
 
 function App() {
@@ -26,6 +26,17 @@ function App() {
         </ProtectedRoute>}/>
       <Route path='/profile' element={<ProtectedRoute>
         <ProfilePage />
+        </ProtectedRoute>}/>
+        <Route path='/leaderboard' element={<LeaderboardPage />}/>
+        <Route path='/teacherHome' element={
+        <ProtectedRoute>
+          <TeacherHomePage />
+          </ProtectedRoute>}/>
+        <Route path='/quizes' element={<ProtectedRoute>
+          <TeacherQuizesPage />
+        </ProtectedRoute>}/>
+        <Route path='/students' element={<ProtectedRoute>
+          <TeacherStudentPage />
         </ProtectedRoute>}/>
       </Routes>
     </>
