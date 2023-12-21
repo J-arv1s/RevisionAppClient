@@ -192,10 +192,13 @@ body {
   color: white;
 }
 
-.quiz button {
-  padding: 20px;
-  font-size: 20px;
-}
+
+.ans {
+    padding: 20px;
+    font-size: 20px;
+    width: 700px;
+    height: 65px;
+  }
 
 #firstSection {
   display: flex;
