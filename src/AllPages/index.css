@@ -10,6 +10,16 @@ body {
   font-family: "Nunito Sans", sans-serif;
 }
 
+#score {
+    font-size: 30px;
+    margin-bottom: 1em;
+    border: 3px solid white;
+    padding: 10px;
+    margin-top: 2em;
+    background-color: white;
+    border-radius: 4px;
+}
+
 #profileDisplay {
   display: flex;
   justify-content: center;
@@ -27,6 +37,18 @@ body {
     flex-direction: column;
     margin-left:15em;
     margin-right:15em;
+}
+
+.leaderboard h2 {
+    margin-top: 3em;
+    font-size: 43px;
+    color: rgb(0, 0, 0);
+}
+
+.students h2 {
+    margin-top: 3em;
+    font-size: 43px;
+    color: rgb(0, 0, 0);
 }
 
 .leaderboard table,td, tr  {
@@ -137,7 +159,7 @@ body {
 }
 
 #teacher {
-  margin-top: 15em;
+  margin-top: 10em;
   gap: 3em;
   display: flex;
   flex-direction: column;
@@ -172,19 +194,52 @@ body {
 }
 
 .move {
-  display: flex;
-  flex-direction: row;
-  gap: 5em;
+    display: flex;
+    justify-content: center;
+    gap: 5em;
 }
+
+.move .nextBtn {
+    padding: 20px 30px;
+    
+}
+
+.finalScore{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3em;
+    margin-top: 2em;
+    margin-bottom: 0;
+}
+
+.finalScore p {
+    font-size: 28px;
+}
+
+.finalScore button {
+    padding: 20px 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #e7a9d8;
+    border: 3px solid pink;
+}
+
+.finalScore button:hover {
+    background-color: #df24b0;
+}
+
 
 .quiz {
   display: flex;
-  gap: 1em;
-  flex-direction: column;
-  padding: 30px 70px;
-  /* background-color: #e249a2;  */
-  /* background-color: #9C27B0; */
-  border-radius: 15px;
+    gap: 1em;
+    flex-direction: column;
+    padding: 30px 75px;
+    /* background-color: #e249a2;  */
+    /* background-color: #9C27B0; */
+    border-radius: 15px;
+    border: 3px solid rgb(180, 12, 180);
 }
 
 .quiz p {
@@ -192,10 +247,13 @@ body {
   color: white;
 }
 
-.quiz button {
-  padding: 20px;
-  font-size: 20px;
-}
+
+.ans {
+    padding: 20px;
+    font-size: 20px;
+    width: 700px;
+    height: 65px;
+  }
 
 #firstSection {
   display: flex;
@@ -212,9 +270,9 @@ body {
   }
 
 .subjects h1 {
-  font-size: 45px;
+  font-size: 60px;
   font-style: italic;
-  margin-top: 3em;
+  margin-top: 1em;
   color: white;
 }
 
@@ -222,13 +280,15 @@ body {
   margin-top: 3em;
   font-size: 43px;
   color: white;
+  margin-left: 0em ;
+  margin-right: 0em;
 }
-
+/*
 h2 {
   margin-top: 3em;
   font-size: 43px;
   color: rgb(0, 0, 0);
-}
+}*/
 
 .first h1 {
     margin-top: 3em;
@@ -306,13 +366,13 @@ input[type="password"] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0em 3em 3em 3em;
+  
   margin-left: 20em;
 }
-
+/*
 #middle1 h2 {
   margin-top: 2em;
-}
+}*/
 
 .quiz button {
   /* background-color: #9C27B0; */
@@ -341,6 +401,7 @@ input[type="password"] {
 #navSection {
   border-bottom: solid 2px blueviolet;
 }
+/*
 .subjects {
   display: flex;
   flex-direction: column;
@@ -354,9 +415,9 @@ input[type="password"] {
   flex-direction: column;
   font-size: 30px;
   font-family: Georgia, "Times New Roman", Times, serif;
-  display: inline-block;
-}
-
+ 
+}*/
+/*
 .buttons-content {
   display: none;
   text-decoration: none;
@@ -366,7 +427,7 @@ input[type="password"] {
 
   /* min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
-}
+*//*
 
 .buttons-content a {
   text-decoration: none;
@@ -385,7 +446,7 @@ input[type="password"] {
 .buttons:hover .buttons-content {
   display: flex;
   /* transition:none 3s;*/
-  flex-direction: column;
+ /* flex-direction: column;
   align-items: center;
   margin-top: 0;
 }
@@ -406,14 +467,14 @@ input[type="password"] {
 
   /* min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
-}
+/*
 
 .buttons1-content a {
   text-decoration: none;
   color: rgb(255, 255, 255);
   display: block;
 }
-
+*/
 
 #mathsBtn {
   border: 3px solid white;
@@ -521,12 +582,28 @@ main table {
     content: "✔️ ";
   }
   
-  .landingText ul li {
-    font-size: 16px;
-    color: #000000;
-    margin-bottom: 10px;
-  }
+.landingText ul li {
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 10px;
+}
   
-  .landingText p:last-child {
-    margin-bottom: 0;
-  }
+.landingText p:last-child {
+  margin-bottom: 0;
+}
+
+.studentInfo {
+    background-color: rgb(191, 207, 236);
+    margin: 20px 160px;
+    border-radius: 20px;
+
+}
+.studentInfo h2 {
+    font-size: 50px;
+    margin-top: 0.3em;
+}
+
+.studentInfo p {
+    font-size: 35px;
+    margin-top: 0.3em;
+}

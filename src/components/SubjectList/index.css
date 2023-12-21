@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic&family=Manrope&family=Nunito+Sans:opsz,wght@6..12,300&display=swap");
+
+#quizzesBtn {
+    padding: 10px 30px 10px 30px;
+    font-size: 28px;
+    background-color: #e7a9d8;
+    border: none;
+    border-radius: 7px;
+    color: rgb(48, 46, 46);
+    cursor: pointer;
+    font-size: 27px;
+    transition: background-color 0.3s ease;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
+}
+
+#quizzesBtn:hover { 
+    background-color: #a7388b;
+    font-size: 31px;
+    transition: font-size 0.3s ease;
+}
+
+#subjectsBtn {
+    padding: 10px 60px 10px 60px;
+    font-size: 28px;
+    background-color: #cc41a9;
+    border: 3px solid purple;
+
+    border-radius: 7px;
+    color: rgb(48, 46, 46);
+    cursor: pointer;
+    font-size: 27px;
+    transition: background-color 0.3s ease;
+    font-family: "Nunito Sans", sans-serif;
+   
+
+}
+
+#subjectsBtn:hover {
+    /*background-color: #e689ce;*/
+    background-color: #a7388b;
+    font-size: 29px;
+    transition: font-size 0.3s ease;
+}
+.buttons{
+    gap: 0.5em;
+    font-family: "Nunito Sans", sans-serif;   
+}
+
+.subjects {
+   
+    margin-left:0;
+    margin-right:0;
+}
+.subjects p {
+    font-size: 27px;
+    color: white;
+}

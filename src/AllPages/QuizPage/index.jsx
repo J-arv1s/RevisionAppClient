@@ -81,17 +81,15 @@ const QuizPage = () => {
         <SubjectList onQuizSelected={fetchQuizData}/>
       </section>
 
-
-
       <section id="middle1">
         {currentQuestion ? (
           <>
             <h2>{currentQuestion.quizName}</h2>
-            <p>Score: {score}</p>
+            <p id='score'>Score: {score}</p>
             <div className="quiz">
               <p>{currentQuestion.question}</p>
               {answers.map((answer, index) => (
-                  <button
+                  <button className='ans'
                     key={index}
                     onClick={() => handleAnswerClick(answer)}
                     style={{
@@ -112,16 +110,18 @@ const QuizPage = () => {
                 ))}
                 <div className="move">
                   {!showScore && (
-                    <button onClick={handleNextClick}>Next</button>
+                    <button className='nextBtn' onClick={handleNextClick}>Next</button>
                   )}
                 </div>
               </div>
+              <div className='finalScore'>
               {showScore && (
                 <>
                 <p>Your final score is: {score} out of {questions.length}</p>
                 <Link id='link1' to="/leaderboard"><button onClick={handleScore(score)}>Leaderboard</button></Link>
                 </>
               )}
+              </div>
             </>
           ) : (
             <p>Loading quiz...</p>

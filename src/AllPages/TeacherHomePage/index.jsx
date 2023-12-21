@@ -13,6 +13,11 @@ const TeacherHomePage = () => {
             <div>
                 <Link id='link3' to="/students">Students</Link>
             </div>
+            <div className='studentInfo'>
+              <h2>Stats</h2>
+              <p>Most Active student: [username]</p>
+              <p>Overall student engagement: [percentage]</p>
+            </div>
         </section>
     </>
   )

@@ -23,6 +23,15 @@ const TeacherStudentPage = () => {
     fetchQuizData()
   }, [])
 
+  const handleDelete = (username) => {
+    fetch(`https://revision-app-2b5p.onrender.com/users/${username}`, { method: 'DELETE' })
+    .then(() => {
+        console.log(`${username} deleted`);
+        setUsers(users.filter(user => user.username !== username));
+    })
+    .catch(error => console.error('Error deleting User:', error));
+};
+
   return (
     <>
     <div className="students">
@@ -30,7 +39,6 @@ const TeacherStudentPage = () => {
       <table>
         <tr>
           <th>Username</th>
-          <th>T</th>
         </tr>
         {
         users
@@ -38,7 +46,7 @@ const TeacherStudentPage = () => {
         .map((entry, i) => (
           <tr key={i}>
             <td>{ entry.username }</td>
-            <button id='removeBtn'>Remove</button>
+            <button id='removeBtn' onClick={() => handleDelete(entry.username)}>Remove</button>
           </tr>
         ))
         }
