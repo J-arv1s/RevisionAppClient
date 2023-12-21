@@ -6,10 +6,14 @@ import '../index.css'
 const TeacherQuizzesPage = () => {
 
     const [ newQuizName, setNewQuizName ] = useState('')
+    const [ assignedSubject, setAssignedSubject ] = useState('')
     const [ quizzes, setQuizzes ] = useState([])
 
-    const handleInputChange = (e) => {
+    const handleNewQuizName = (e) => {
         setNewQuizName(e.target.value);
+    };
+    const handleAssignedSubject = (e) => {
+        setAssignedSubject(e.target.value);
     };
 
     const fetchQuizzes = () => {
@@ -23,7 +27,10 @@ const TeacherQuizzesPage = () => {
         fetch('https://revision-app-2b5p.onrender.com/quizzes', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ quizName: newQuizName })
+            body: JSON.stringify({ 
+                quizName: newQuizName,
+                subject: assignedSubject
+            })
         })
         .then(response => response.json())
         .then(data => {
@@ -33,6 +40,7 @@ const TeacherQuizzesPage = () => {
         .catch(error => console.error('Error adding quiz:', error));
 
         setNewQuizName('')
+        setAssignedSubject('')
     };
 
     useEffect(() => {
@@ -44,15 +52,21 @@ const TeacherQuizzesPage = () => {
         <section id="teacher1">
             <div className='first'>
                 <h2 id='h2Quiz'>Quizzes</h2>
-                <div>
-                <label>New Quiz : 
+                <form>
+                <label>New Quizname : 
                     <input type='text'
-                           name='question'
-                           value={newQuizName}
-                           onChange={handleInputChange}required/>
+                        name='quizname'
+                        value={newQuizName}
+                        onChange={handleNewQuizName}/>
                 </label>
-                    <button id="addQuiz" onClick={handleNewQuiz}>+</button>
-                </div>
+                <label>Assign subject : 
+                    <input type='text'
+                        name='subject'
+                        value={assignedSubject}
+                        onChange={handleAssignedSubject}/>
+                </label>
+                <button id="addQuiz" onClick={handleNewQuiz}>+</button>
+                </form>
             </div>
             <section id='quizzes'>
                 <TeacherQuizzes quizzes={quizzes} setQuizzes={setQuizzes} />
