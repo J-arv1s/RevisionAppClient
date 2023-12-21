@@ -20,7 +20,8 @@ const PageWrapper = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    navigate("/login");
+    localStorage.removeItem("username");
+    navigate("/");
   };
 
   const isLoggedIn = !!localStorage.getItem("token");
@@ -41,12 +42,16 @@ const PageWrapper = () => {
         <NavLink to="/leaderboard" style={linkStyle}>
           Leaderboard
         </NavLink>
+        {isLoggedIn && (
         <NavLink to="/quiz" style={linkStyle}>
           Quiz
         </NavLink>
+        )}
+        {isLoggedIn && (
         <NavLink to="/teacherHome" style={linkStyle}>
           Teacher
         </NavLink>
+        )}
         {isLoggedIn ? (
           <NavLink to="/" style={linkStyle} onClick={handleLogout}>
             Logout

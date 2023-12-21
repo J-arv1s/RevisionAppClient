@@ -3,6 +3,7 @@ import './App.css'
 import { Routes, Route } from 'react-router-dom';
 import { PageWrapper } from './components/index'
 import { LoginPage, StudentPage, SubjectsPage, RegisterPage, QuizPage, ProfilePage, LeaderboardPage, TeacherHomePage, TeacherStudentPage, TeacherQuizesPage } from './AllPages'
+import ProtectedRoute from './ProtectedRoute';
 
 function App() {
 
@@ -12,16 +13,31 @@ function App() {
         <PageWrapper />
       </header>
       <Routes>
-        <Route path="/" element={< LoginPage/>}/>   
-        <Route path='/register' element={<RegisterPage />}/>
-        <Route path='/student' element={<StudentPage />}/>
-        <Route path='/subjects' element={<SubjectsPage />}/>
-        <Route path='/quiz' element={<QuizPage />}/>
-        <Route path='/profile' element={<ProfilePage />}/>
+      <Route path="/" element={< LoginPage/>}/>   
+      <Route path='/register' element={<RegisterPage />}/>
+      <Route path='/student' element={<ProtectedRoute>
+        <StudentPage />
+        </ProtectedRoute>}/>
+      <Route path='/subjects' element={<ProtectedRoute>
+      <SubjectsPage />
+      </ProtectedRoute>}/>
+      <Route path='/quiz' element={<ProtectedRoute>
+        <QuizPage />
+        </ProtectedRoute>}/>
+      <Route path='/profile' element={<ProtectedRoute>
+        <ProfilePage />
+        </ProtectedRoute>}/>
         <Route path='/leaderboard' element={<LeaderboardPage />}/>
-        <Route path='/teacherHome' element={<TeacherHomePage />}/>
-        <Route path='/quizes' element={<TeacherQuizesPage />}/>
-        <Route path='/students' element={<TeacherStudentPage />}/>
+        <Route path='/teacherHome' element={
+        <ProtectedRoute>
+          <TeacherHomePage />
+          </ProtectedRoute>}/>
+        <Route path='/quizes' element={<ProtectedRoute>
+          <TeacherQuizesPage />
+        </ProtectedRoute>}/>
+        <Route path='/students' element={<ProtectedRoute>
+          <TeacherStudentPage />
+        </ProtectedRoute>}/>
       </Routes>
     </>
   )
