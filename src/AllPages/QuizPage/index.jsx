@@ -81,6 +81,7 @@ const QuizPage = () => {
             </div>
           </div>
         </div>
+
       </section>
         <section id="middle1">
           {currentQuestion ? (
@@ -102,7 +103,7 @@ const QuizPage = () => {
                               ? 'red'
                               : ''
                           : '',
-                      color: showAnswer || selectedAnswer === answer ? 'white' : 'black',
+                      color: showAnswer || selectedAnswer === answer ? 'black' : 'white',
                     }}
                     disabled={showAnswer}
                   >
