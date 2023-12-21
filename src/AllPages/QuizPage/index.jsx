@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import '../index.css';
+import { SubjectList } from '../../components';
 
 const QuizPage = () => {
   const [questions, setQuestions] = useState([]);
@@ -16,9 +17,9 @@ const QuizPage = () => {
     return allAnswers.sort(() => Math.random() - 0.5);
   };
 
-  const fetchQuizData = async () => {
+  const fetchQuizData = async (quizName) => {
     try {
-      const response = await fetch('https://revision-app-2b5p.onrender.com/quizzes/science-quiz');
+      const response = await fetch(`https://revision-app-2b5p.onrender.com/quizzes/${quizName}`);
       const data = await response.json();
       setQuestions(data.questions);
       setAnswers(shuffleAnswers(data.questions[0].answer, data.questions[0].wrongAnswers));
@@ -37,7 +38,9 @@ const QuizPage = () => {
     if (isCorrectAnswer) {
       setScore(score + 1); 
     }
-    setShowAnswer(true); 
+    if(selectedAnswer){
+      setShowAnswer(true); 
+    }
 
     setTimeout(() => {
       if (currentQuestionIndex < questions.length - 1) {
@@ -52,46 +55,43 @@ const QuizPage = () => {
     }, 1000); 
   };
 
-  useEffect(() => {
-    fetchQuizData();
-  }, []);
+  const handleScore = (plusScore) => {
+    const name = localStorage.getItem("username")
+    fetch(`https://revision-app-2b5p.onrender.com/users/score/${name}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+            score: plusScore
+        })
+    })
+    .then(response => response.json())
+    .then(updatedScore => {
+        console.log('Score updated', updatedScore);
+    })
+    .catch(error => console.error('Error updating userscore...', error));
+  };
 
   const currentQuestion = questions[currentQuestionIndex];
-
+  
   return (
     <>
       <section id="main">
-      <section id="firstSection">
-        <div className="subjects">  
-          <h1>Subjects</h1>
-          <div className='buttons'>
-            <p id="mathsBtn" >Maths</p>
-            <div className="buttons-content">
-            <Link to="/quiz">Quiz 1</Link>
-              <a href="#">Quiz 2</a>
-              <a href="#">Quiz 3</a>
-            </div>
-          </div>
-          <div className='buttons1'>
-            <p id="sciencesBtn">Sciences</p>
-            <div className="buttons1-content">
-              <Link to="/quiz">Quiz 1</Link>
-              <a href="#">Quiz 2</a>
-              <a href="#">Quiz 3</a>
-            </div>
-          </div>
-        </div>
 
+      <section id="firstSection">
+        <SubjectList onQuizSelected={fetchQuizData}/>
       </section>
-        <section id="middle1">
-          {currentQuestion ? (
-            <>
-              <h2>{currentQuestion.quizName}</h2>
-              <p>Score: {score}</p>
-              <div className="quiz">
-                <p>{currentQuestion.question}</p>
-                {answers.map((answer, index) => (
-                  <button className='quizbutton'
+
+
+
+      <section id="middle1">
+        {currentQuestion ? (
+          <>
+            <h2>{currentQuestion.quizName}</h2>
+            <p>Score: {score}</p>
+            <div className="quiz">
+              <p>{currentQuestion.question}</p>
+              {answers.map((answer, index) => (
+                  <button
                     key={index}
                     onClick={() => handleAnswerClick(answer)}
                     style={{
@@ -117,7 +117,10 @@ const QuizPage = () => {
                 </div>
               </div>
               {showScore && (
+                <>
                 <p>Your final score is: {score} out of {questions.length}</p>
+                <Link id='link1' to="/leaderboard"><button onClick={handleScore(score)}>Leaderboard</button></Link>
+                </>
               )}
             </>
           ) : (
@@ -130,8 +133,3 @@ const QuizPage = () => {
 };
 
 export default QuizPage;
-
-
-
-
-

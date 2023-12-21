@@ -23,7 +23,7 @@ function App() {
       </ProtectedRoute>}/>
       <Route path='/quiz' element={<ProtectedRoute>
         <QuizPage />
-        </ProtectedRoute>}/>
+      </ProtectedRoute>} />
       <Route path='/profile' element={<ProtectedRoute>
         <ProfilePage />
         </ProtectedRoute>}/>
