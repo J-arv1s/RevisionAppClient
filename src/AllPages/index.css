@@ -476,3 +476,51 @@ th {
 main table {
   font-size: 25px;
 }
+
+.landingText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  .landingText header h1 {
+    font-size: 36px;
+    color: #000000;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .landingText section {
+    margin-top: 20px;
+  }
+  
+  .landingText p {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  
+  .landingText ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  
+  .landingText ul li::before {
+    content: "✔️ ";
+  }
+  
+  .landingText ul li {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  
+  .landingText p:last-child {
+    margin-bottom: 0;
+  }
