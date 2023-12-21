@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 import { Routes, Route } from 'react-router-dom';
 import { PageWrapper } from './components/index'
-import { LoginPage, StudentPage, SubjectsPage, RegisterPage, QuizPage, ProfilePage, TeacherHomePage, TeacherStudentPage, TeacherQuizesPage } from './AllPages'
+import { LoginPage, StudentPage, SubjectsPage, RegisterPage, QuizPage, ProfilePage, LeaderboardPage, TeacherHomePage, TeacherStudentPage, TeacherQuizesPage } from './AllPages'
 
 function App() {
 
@@ -12,15 +12,16 @@ function App() {
         <PageWrapper />
       </header>
       <Routes>
-      <Route path="/" element={< LoginPage/>}/>   
-      <Route path='/register' element={<RegisterPage />}/>
-      <Route path='/student' element={<StudentPage />}/>
-      <Route path='/subjects' element={<SubjectsPage />}/>
-      <Route path='/quiz' element={<QuizPage />}/>
-      <Route path='/profile' element={<ProfilePage />}/>
-      <Route path='/teacherHome' element={<TeacherHomePage />}/>
-      <Route path='/quizes' element={<TeacherQuizesPage />}/>
-      <Route path='/students' element={<TeacherStudentPage />}/>
+        <Route path="/" element={< LoginPage/>}/>   
+        <Route path='/register' element={<RegisterPage />}/>
+        <Route path='/student' element={<StudentPage />}/>
+        <Route path='/subjects' element={<SubjectsPage />}/>
+        <Route path='/quiz' element={<QuizPage />}/>
+        <Route path='/profile' element={<ProfilePage />}/>
+        <Route path='/leaderboard' element={<LeaderboardPage />}/>
+        <Route path='/teacherHome' element={<TeacherHomePage />}/>
+        <Route path='/quizes' element={<TeacherQuizesPage />}/>
+        <Route path='/students' element={<TeacherStudentPage />}/>
       </Routes>
     </>
   )
