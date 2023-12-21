@@ -7,27 +7,7 @@ const StudentPage = () => {
         <>
         <h1>Hi {userName}</h1>
         <h2>Check your Progress</h2>
-      <section id="firstSection">
-      <div className="subjects">  
-        <h1>Subjects</h1>
-        <div className='buttons'>
-          <p id="mathsBtn" >Maths</p>
-          <div className="buttons-content">
-            <a href="#">Quiz 1</a>
-            <a href="#">Quiz 2</a>
-            <a href="#">Quiz 3</a>
-          </div>
-        </div>
-        <div className='buttons1'>
-          <p id="sciencesBtn">Sciences</p>
-          <div className="buttons1-content">
-            <a href="#">Quiz 1</a>
-            <a href="#">Quiz 2</a>
-            <a href="#">Quiz 3</a>
-          </div>
-        </div>
-      </div>
-    </section>
+      
     <section id="progressSection">
         <table>
           <thead>
@@ -58,3 +38,5 @@ const StudentPage = () => {
 }
 
 export default StudentPage;
+
+

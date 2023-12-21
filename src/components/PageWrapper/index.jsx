@@ -20,7 +20,8 @@ const PageWrapper = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    navigate("/login");
+    localStorage.removeItem("username");
+    navigate("/");
   };
 
   const isLoggedIn = !!localStorage.getItem("token");
