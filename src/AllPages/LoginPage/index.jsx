@@ -55,7 +55,6 @@ const LoginPage = () => {
     justifyContent: 'space-evenly', 
     height: '100vh',
     width: '100%',
-    backgroundColor: 'rgb(238, 153, 234)',
   };
   
   const formStyle = {
