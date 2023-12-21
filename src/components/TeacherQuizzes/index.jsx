@@ -35,6 +35,12 @@ const TeacherQuizzes = ({ quizzes, setQuizzes }) => {
         }
     }
 
+    const clear = () => {
+        setFormVisible(false)
+        setListVisible(false)
+        setSelectedQuiz('')
+    }
+
     const handleAddQuestion = (formData) => {
         const question = formData.question
         const answer = formData.answer
@@ -74,7 +80,7 @@ const TeacherQuizzes = ({ quizzes, setQuizzes }) => {
                 <button id='delete' onClick={() => handleDelete(quiz.quizName)}>Delete</button>
             </div>
         ))}
-        <h3>Selected quiz: {selectedQuiz}</h3>
+        <h3>Selected quiz: {selectedQuiz} <button onClick={() => clear()}>clear</button></h3>
         {listVisible && (
         <ul>
             {questionArr.map((q, i) => (
