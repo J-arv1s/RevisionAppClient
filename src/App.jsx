@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 import { Routes, Route } from 'react-router-dom';
 import { PageWrapper } from './components/index'
-import { LoginPage, StudentPage, SubjectsPage, RegisterPage, QuizPage, ProfilePage } from './AllPages'
+import { LoginPage, StudentPage, SubjectsPage, RegisterPage, QuizPage, ProfilePage, LeaderboardPage } from './AllPages'
 
 function App() {
 
@@ -18,6 +18,7 @@ function App() {
       <Route path='/subjects' element={<SubjectsPage />}/>
       <Route path='/quiz' element={<QuizPage />}/>
       <Route path='/profile' element={<ProfilePage />}/>
+      <Route path='/leaderboard' element={<LeaderboardPage />}/>
       </Routes>
     </>
   )
