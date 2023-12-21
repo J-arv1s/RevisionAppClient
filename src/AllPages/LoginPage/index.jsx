@@ -27,7 +27,7 @@ const LoginPage = () => {
         localStorage.setItem("username", username);
         setLoginMessage('Login successful. Redirecting...');
         setTimeout(() => {
-          navigate('/quiz');
+          navigate('/profile');
         }, 3000); 
       } else {
         console.error('Login failed:', data.error);
