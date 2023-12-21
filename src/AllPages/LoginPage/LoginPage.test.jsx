@@ -7,10 +7,12 @@ import matchers from '@testing-library/jest-dom/matchers';
 expect.extend(matchers);
 
 import LoginPage from '.';
+import { BrowserRouter } from 'react-router-dom';
 
 describe('Login Page', () => {
   beforeEach(() => {
-    render(<LoginPage />)
+   
+    render(  <BrowserRouter> <LoginPage /> </BrowserRouter>)
   })
 
   afterEach(() => {
@@ -28,7 +30,7 @@ describe('Login Page', () => {
   }
 
   it('renders an email input', () => {
-    expect(screen.getByPlaceholderText('Email')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('Username')).toBeInTheDocument();
   })
 
   it('renders a password input', () => {

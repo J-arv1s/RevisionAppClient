@@ -24,11 +24,13 @@ const TeacherStudentPage = () => {
   }, [])
 
   return (
+    <>
     <div className="students">
       <h2>Classroom Students</h2>
       <table>
         <tr>
           <th>Username</th>
+          <th>T</th>
         </tr>
         {
         users
@@ -42,6 +44,7 @@ const TeacherStudentPage = () => {
         }
       </table>
     </div>
+    </>
   )
 }
 
