@@ -20,22 +20,31 @@ describe('TeacherQuizzesPage Component', () => {
     cleanup()
   })
 
-  it('h2 displays Quizes', () => {
-    const h2 = document.querySelector('h2')
-    expect(h2.innerHTML).toContain('Quizes')
+  it('h1 displays Quizzes', () => {
+    const display = screen.getByRole('heading')
+    expect(display.textContent).toBe('Quizzes')
+  })
+  it('has a label displaying Assing Subject :', () => {
+    const display = document.querySelector('label')
+    expect(display.innerHTML).toContain('Assign Subject :')
   })
 
   it('has a add quiz button', () => {
     const button = document.querySelector('#addQuiz')
     expect(button.innerHTML).toBeTruthy()
   })
-  it('has a delete button', () => {
-    const button = document.querySelector('#delete')
-    expect(button.innerHTML).toBeTruthy()
+
+  it('has 2 labels', () => {
+    const label1 = document.querySelector('#label1')
+    expect(label1.innerHTML).toBeTruthy()
+    const label2 = document.querySelector('#label2')
+    expect(label2.innerHTML).toBeTruthy()
   })
-  it('has a edit button', () => {
-    const button = document.querySelector('#edit')
-    expect(button.innerHTML).toBeTruthy()
+
+  it('it has 2 inputs', () => {
+    expect(screen.getByPlaceholderText('input1')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('input2')).toBeInTheDocument();
   })
+
 
 })
