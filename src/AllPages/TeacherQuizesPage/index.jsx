@@ -14,8 +14,8 @@ const TeacherQuizesPage = () => {
             <section id='quizes'>
                 <div className='buttons'>
                     <p>Quiz 1</p>
-                    <button>Edit</button>
-                    <button>Delete</button>
+                    <button id='edit'>Edit</button>
+                    <button id='delete'>Delete</button>
                 </div>
                 <div className='buttons'>
                     <p>Quiz 2</p>
