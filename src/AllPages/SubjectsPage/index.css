@@ -1,13 +1,30 @@
 #heading{
-    margin-top: 50px;
+    font-size: 50px;
 }
 
+input[type="text"]{
+    
+    font-size: 20px;
+}
+ 
+#subjects { 
+    margin-top: 8em;
+    gap:2em;
+}
+
+.subjectName {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap:1em;
+    margin-bottom: 2em;
+}
+  
 #add {
     display: block; 
     width: max-content; 
-    margin: 10px auto; 
     padding: 15px 30px; 
-    background-color: #4CAF50;
+    background-color: #3e94db;
     color: white; 
     font-size: 1.2rem; 
     border: none; 
@@ -17,7 +34,7 @@
 }
 
 #add:hover {
-    background-color: #45a049; 
+    background-color: rgb(30, 71, 146);
 }
 
 #add:active {

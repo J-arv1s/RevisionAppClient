@@ -1,5 +1,6 @@
 import React from 'react';
 import TeacherSubject from '../TeacherSubject'; 
+import './index.css'
 
 const TeacherSubjects = ({ subjects, setSubjects }) => {
   const handleDelete = (subjectName) => {
@@ -13,13 +14,15 @@ const TeacherSubjects = ({ subjects, setSubjects }) => {
 
   return (
     <>
-      {subjects.map((subject) => (
-        <TeacherSubject 
-          key={subject._id} 
-          subject={subject} 
-          handleDelete={handleDelete} 
+      <div className='subjectTarget'>
+        {subjects.map((subject) => (
+          <TeacherSubject 
+            key={subject._id} 
+            subject={subject} 
+            handleDelete={handleDelete} 
         />
-      ))}
+        ))}
+      </div>
     </>
   );
 };

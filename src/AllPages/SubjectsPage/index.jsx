@@ -32,8 +32,9 @@ const SubjectsPage = () => {
 
   return (
     <>
+    <section id='subjects'>
       <h1 id='heading'>Subjects Page</h1>
-      <div>
+      <div className='subjectName'>
         <input 
           type="text" 
           value={newSubjectName} 
@@ -43,6 +44,7 @@ const SubjectsPage = () => {
         <button id='add' onClick={handleAddSubject}>Add subject</button>
       </div>
       <TeacherSubjects subjects={subjects} setSubjects={setSubjects} />
+    </section>
     </>
   );
 };

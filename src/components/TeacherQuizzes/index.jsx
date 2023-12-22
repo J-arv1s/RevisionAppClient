@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import QuestionForm from '../QuestionForm';
-
+import './index.css'
 const TeacherQuizzes = ({ quizzes, setQuizzes }) => {
 
     const [questionArr, setQuestionArr] = useState([])
@@ -73,7 +73,7 @@ const TeacherQuizzes = ({ quizzes, setQuizzes }) => {
     return (
         <>
         {quizzes.map((quiz, i) => (
-            <div key={i} id='teach-info'>
+            <div key={i} id='teach-info1'>
                 <h3 id='quiz-name'>{quiz.quizName}</h3>
                 <button id='view' onClick={() => handleView({ quiz })}>View</button>
                 <button id='edit' onClick={() => handleEdit({ quiz })}>Edit</button>
