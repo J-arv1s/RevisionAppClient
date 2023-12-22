@@ -131,7 +131,6 @@ const LoginPage = () => {
         </section>
         </div>
         <p></p>
-        {loginMessage && <div>{loginMessage}</div>}
       </div>
       <form onSubmit={handleSubmit} style={formStyle}>
         <h1 style={{ marginBottom: "20px" }}>Login</h1>
@@ -150,11 +149,20 @@ const LoginPage = () => {
           onChange={(e) => setPassword(e.target.value)}
           style={inputStyle}
           required
-        />
+          />
         <button type="submit" style={buttonStyle}>
           Login
         </button>
         <p>Don't have an account yet? <Link to='/register'>Register here</Link></p>
+        {loginMessage && (
+  <div
+    style={{
+      color: loginMessage === "Login successful. Redirecting..." ? 'green' : 'red'
+    }}
+  >
+    {loginMessage}
+  </div>
+)}
       </form>
     </div>
   );
