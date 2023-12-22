@@ -91,7 +91,7 @@ const LoginPage = () => {
     margin: "10px 0",
     borderRadius: "5px",
     border: "none",
-    backgroundColor: "#4A90E2",
+    backgroundColor: "#9605af",
     color: "white",
     fontSize: "16px",
     cursor: "pointer",

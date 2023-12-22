@@ -328,6 +328,7 @@ h2 {
   flex-direction: column;
   gap: 1em;
   padding: 50px;
+  width: 400px;
 }
 
 .registerForm form {
@@ -348,7 +349,7 @@ input[type="password"] {
 }
 
 #buttonSubmit:hover {
-  background-color: rgb(110, 158, 248);
+  background-color: #7b1fa2;
 }
 
 #buttonSubmit {
@@ -357,7 +358,8 @@ input[type="password"] {
   border-radius: 6px;
   border-style: none;
   cursor: pointer;
-  background-color: #4a90e2;
+  color: white;
+  background-color: #9605af;
   font-family: "Nunito Sans", sans-serif;
 }
 
@@ -607,3 +609,5 @@ main table {
     font-size: 35px;
     margin-top: 0.3em;
 }
+
+
