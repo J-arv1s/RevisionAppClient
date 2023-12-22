@@ -53,14 +53,14 @@ const TeacherQuizzesPage = () => {
             <div className='first'>
                 <h1 id='h2Quiz'>Quizzes</h1>
                 <form>
-                <label id='label1'>New Quizname :
-                    <input placeholder="input1" type='text'
+                <label id='label1'>New Quizname:
+                    <input id='input1' type='text'
                         name='quizname'
                         value={newQuizName}
                         onChange={handleNewQuizName}/>
                 </label>
-                <label id='label2'>Assign subject : 
-                    <input placeholder="input2" type='text'
+                <label id='label2'>Assign subject: 
+                    <input id='input2'type='text'
                         name='subject'
                         value={assignedSubject}
                         onChange={handleAssignedSubject}/>

@@ -1,13 +1,28 @@
+.sectionQuiz {
+    border: 9px solid rgb(32, 77, 226);
+    margin-left: 18em;
+    margin-right: 20em ;
+    border-radius: 15px;
+}
+
+.questions ul {
+    list-style: none;
+}
+
+.questions li {
+    font-size: 25px;
+}
+
 #teach-info1 {
     display: flex;
     justify-content: center; 
     padding-bottom: 20px;
-    gap: 10px;
-  
+    align-items: center;
+    gap: 4px;
 }
   
 #teach-info1 button {
-    padding: 10px 20px; 
+    padding: 20px 40px; 
     font-size: 1.2rem; 
     border: none; 
     border-radius: 5px; 
@@ -15,6 +30,57 @@
     transition: background-color 0.3s, transform 0.2s; 
 }
 
+ h3 {
+    font-size: 27px;
+   
+}
+
+#lastSection {
+    margin-left: 20em;
+    margin-right:20em ;
+}
+
 #view {
+    background-color: #a7c5e7;
     margin:1em;
 }
+
+#view:hover {
+    background-color: #497bb4;
+}
+
+#teach-info1 ul {
+    list-style: decimal;
+}
+
+#clear:hover {
+    background-color: #a7c5e7;
+  }
+
+#clear {
+    background-color: #4a90e2;
+    cursor: pointer;
+    font-size: 22px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 6px;
+    border: solid 3px rgb(48, 106, 161);
+    /* border-style: none;*/
+    text-decoration: none;
+    color: rgb(56, 53, 53);
+    font-family: "Nunito Sans", sans-serif;
+    margin-bottom: 1em;
+  }
+
+  #clear2 {
+    background-color: #4a90e2;
+    cursor: pointer;
+ margin-left: 2em;
+    padding: 10px 30px 10px 30px;
+    border-radius: 6px;
+    border: solid 3px rgb(48, 106, 161);
+    /* border-style: none;*/
+    text-decoration: none;
+    color: rgb(56, 53, 53);
+    font-family: "Nunito Sans", sans-serif;
+    margin-bottom: 1em;
+  }

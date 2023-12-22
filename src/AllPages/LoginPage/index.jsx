@@ -114,7 +114,7 @@ const LoginPage = () => {
           <h1>MindMingle - Where Revision Meets Innovation! 🚀</h1>
         </header>
 
-        <section>
+        <section id='landingSection'>
           <p>
             Supercharge your studies with dynamic quizzes tailored for student
             success. 🧠✨
