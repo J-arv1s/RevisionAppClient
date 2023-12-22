@@ -1,0 +1,32 @@
+#form1 {
+
+ margin-bottom:8em ; 
+}
+
+#form1 label {
+    font-size: 30px;
+}
+
+#form1 input[type=text] {
+    font-size: 25px;
+}
+
+#submitQuestionBtn {
+    background-color: #4a90e2;
+    cursor: pointer;
+    font-size: 22px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 6px;
+    border: solid 3px rgb(48, 106, 161);
+    /* border-style: none;*/
+    text-decoration: none;
+    color: rgb(56, 53, 53);
+    font-family: "Nunito Sans", sans-serif;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+#submitQuestionBtn:hover {
+    background-color: #a7c5e7;
+  }
+

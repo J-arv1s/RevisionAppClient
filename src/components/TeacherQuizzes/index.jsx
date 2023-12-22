@@ -72,6 +72,8 @@ const TeacherQuizzes = ({ quizzes, setQuizzes }) => {
 
     return (
         <>
+        <section id='quizessTeacher'>
+            <div className='sectionQuiz'>
         {quizzes.map((quiz, i) => (
             <div key={i} id='teach-info1'>
                 <h3 id='quiz-name'>{quiz.quizName}</h3>
@@ -80,17 +82,23 @@ const TeacherQuizzes = ({ quizzes, setQuizzes }) => {
                 <button id='delete' onClick={() => handleDelete(quiz.quizName)}>Delete</button>
             </div>
         ))}
-        <h3>Selected quiz: {selectedQuiz} <button onClick={() => clear()}>clear</button></h3>
+        </div>
+        <section id='lastSection'>
+        <h3>{selectedQuiz} Quiz Questions <button id='clear' onClick={() => clear()}>clear</button></h3>
+        <div className='questions'>
         {listVisible && (
         <ul>
             {questionArr.map((q, i) => (
-                <li key={i}>{q.question} <button onClick={() => handleQuestionDelete(q._id)}>X</button></li>
+                <li key={i}>{q.question} <button id='clear2' onClick={() => handleQuestionDelete(q._id)}>X</button></li>
             ))}
         </ul>
         )}
         {formVisible && (
             <QuestionForm onSubmit={handleAddQuestion}/>
         )}
+        </div>
+        </section>
+        </section>
         </>
     );
 };

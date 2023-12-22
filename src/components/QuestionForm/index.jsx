@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './index.css'
 
 const QuestionForm = ({ onSubmit }) => {
   const [formData, setFormData] = useState({
@@ -38,7 +39,7 @@ const QuestionForm = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form id='form1' onSubmit={handleSubmit}>
       <label>
         Question:
         <input
@@ -70,7 +71,7 @@ const QuestionForm = ({ onSubmit }) => {
         />
       </label>
       <p style={{ color: 'red' }}>{formError}</p>
-      <button type='submit'>Add Question</button>
+      <button id='submitQuestionBtn' type='submit'>Add Question</button>
     </form>
   );
 };

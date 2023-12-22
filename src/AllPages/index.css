@@ -10,6 +10,10 @@ body {
   font-family: "Nunito Sans", sans-serif;
 }
 
+body button {
+  font-family: "Nunito Sans", sans-serif;
+}
+
 
 
 #score {
@@ -396,80 +400,6 @@ input[type="password"] {
 #navSection {
   border-bottom: solid 2px blueviolet;
 }
-/*
-.subjects {
-  display: flex;
-  flex-direction: column;
-  padding: 0px;
-  width: 300px;
-}
-
-.buttons,
-.buttons1 {
-  align-items: center;
-  flex-direction: column;
-  font-size: 30px;
-  font-family: Georgia, "Times New Roman", Times, serif;
- 
-}*/
-/*
-.buttons-content {
-  display: none;
-  text-decoration: none;
-  background-color: rgb(231, 135, 223);
-  z-index: 1;
-  padding: 1em;
-
-  /* min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
-*//*
-
-.buttons-content a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  display: block;
-}
-
-.buttons-content a:hover {
-  color: rgb(216, 25, 168);
-}
-
-.buttons1-content a:hover {
-  color: rgb(216, 25, 168);
-}
-
-.buttons:hover .buttons-content {
-  display: flex;
-  /* transition:none 3s;*/
- /* flex-direction: column;
-  align-items: center;
-  margin-top: 0;
-}
-
-.buttons1:hover .buttons1-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 0;
-}
-
-.buttons1-content {
-  display: none;
-  text-decoration: none;
-  background-color: rgb(231, 135, 223);
-  z-index: 1;
-  padding: 1em;
-
-  /* min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
-/*
-
-.buttons1-content a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  display: block;
-}
-*/
 
 #mathsBtn {
   border: 3px solid white;
@@ -633,3 +563,32 @@ main table {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
    margin:0,30px;
 }
+
+#teacher1 { 
+  margin-top: 8em;
+}
+
+#teacher1 form {
+  display: flex;
+  flex-direction: column;
+  gap:1em;
+}
+
+#input1 {
+  font-size: 27px;
+  margin-left: 0.7em;
+}
+
+#input2 {
+  font-size: 27px;
+  margin-left: 1em;
+}
+
+#h2Quiz {
+  font-size: 50px;
+}
+
+#teacher1 label {
+  font-size: 30px;
+}
+

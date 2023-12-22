@@ -31,7 +31,7 @@ const LeaderboardPage = () => {
       <table>
         <tr>
           <th>User</th>
-          <th>Quizes Completed</th>
+          <th>Total Score</th>
         </tr>
         {
         users
