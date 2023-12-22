@@ -41,7 +41,7 @@ const RegisterPage = () => {
         <section id="middleRegister">
           <div className="registerForm">
             <h2>Register an account</h2>
-            {successMessage && <p>{successMessage}</p>}
+            {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
             <form onSubmit={handleRegister}>
               <label htmlFor="username">Username: </label>
               <input 
