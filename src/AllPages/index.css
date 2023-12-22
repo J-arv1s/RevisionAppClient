@@ -480,7 +480,7 @@ main table {
   }
   
   .landingText header h1 {
-    font-size: 36px;
+    font-size: 40px;
     color: #000000;
     margin-bottom: 20px;
     font-weight: bold;
@@ -492,7 +492,7 @@ main table {
   }
   
   .landingText p {
-    font-size: 18px;
+    font-size: 24px;
     color: #000000;
     margin-bottom: 10px;
   }
@@ -517,6 +517,10 @@ main table {
   margin-bottom: 0;
 }
 
+#landingSection li {
+
+  font-size: 24px;
+}
 .studentInfo {
     background-color: rgb(191, 207, 236);
     margin: 20px 160px;
